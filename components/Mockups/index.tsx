@@ -1,6 +1,6 @@
 export function Mockups() {
     return (
-        <div className='tablet:static tablet:translate-y-44 tablet:items-end tablet:w-full absolute right-0 h-full tablet:h-auto w-[50%] grid grid-cols-[1fr_1fr] items-center gap-8'>
+        <div className='tablet:static tablet:translate-y-44 translate-x-[35%] tablet:translate-x-[0%] tablet:items-end tablet:w-full right-0 h-full tablet:h-auto w-[50%] grid grid-cols-[1fr_1fr] items-center gap-8'>
             <div className='p-4 shadow-lg bg-white h-max space-y-5 rounded-lg w-80'>
                 <div className='flex space-x-1'>
                     <span className='h-2 w-2 bg-rose-500 rounded-full'></span>
