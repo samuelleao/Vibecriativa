@@ -7,8 +7,9 @@ import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/
 import Image from 'next/image'
 import { Project } from '@/components/Project';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegram, FaTwitter, FaWhatsapp } from 'react-icons/fa'
-import { accordionItems, projects } from './data';
+import { accordionItems, projects } from '../../data/home';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Home() {
 
@@ -26,6 +27,9 @@ export default function Home() {
 
     return (
         <Fragment>
+            <Head>
+                <title>Vibecriativa</title>
+            </Head>
             <Navbar element={currentElement} />
             <header className='overflow-hidden flex tablet:flex-col relative before:z-[-2] before:absolute before:top-0 tablet:before:hidden before:right-0 before:h-full before:w-5/12 before:bg-gradient-to-r before:to-cyan-500 before:from-blue-700 h-screen tablet:h-auto'>
                 <div className="container">
@@ -94,11 +98,11 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="container flex tablet:flex-col">
-                        <div className='tablet:hidden bg-secondary-500 p-8 pb-0 rounded-t-2xl flex-1 relative flex justify-center items-center'>
+                        <div className='tablet:hidden bg-secondary-500 rounded-t-2xl flex-1 relative flex justify-center items-center'>
                             <Image
-                                className=''
+                                className='w-[31.25rem] h-auto'
                                 src={currentImage}
-                                alt=""
+                                alt="Imagem Ilustrativa do Serviço"
                                 quality={100}
                                 width={500}
                                 height={500}
@@ -187,7 +191,7 @@ export default function Home() {
                                 <li><a href="" className='w-12 h-12 rounded-lg flex items-center justify-center bg-green-500  hover:bg-green-600    text-gray-50'><FaWhatsapp size={18} /></a></li>
                                 <li><a href="" className='w-12 h-12 rounded-lg flex items-center justify-center bg-blue-500  hover:bg-blue-600    text-gray-50'><FaTwitter size={18} /></a></li>
                             </ul>
-                            <img src="/logofooter.png" alt="" className='mt-12' />
+                            <Image src="/logofooter.png" alt="Vibecriativa Logotipo" width={130} height={130} className='mt-12' />
                             <p className='text-gray-400 text-sm mb-6 mt-12'>Vibecriativa Digital Marketing e Web. ©</p>
                             <p className='text-gray-400 text-sm'>2023 Todos os direitos reservados</p>
                         </div>

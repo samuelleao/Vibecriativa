@@ -25,3 +25,5 @@ export const Button = React.forwardRef((props: ButtonTypes, forwardedRef: React.
         </button>
     )
 })
+
+Button.displayName = 'Button';
