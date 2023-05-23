@@ -86,7 +86,7 @@ export default function Home() {
                 </section>
                 <div ref={processRef} className='sticky top-32'></div>
                 <section>
-                    <div className="container flex justify-center py-24">
+                    <div className="container flex justify-center  pb-48">
                         <div className='w-[852px] tablet:w-full text-center space-y-4 flex flex-col items-center'>
                             <h4 className='text-5xl tablet:text-2xl font-semibold text-gray-900 leading-normal'><span className='text-primary-500'>Serviços</span> e soluções que desenvolvemos para você</h4>
                             <p className='text-base font-normal text-gray-600'>Você pode nos consultar caso esteja em dúvida em qual seria a melhor solução para sua ideia</p>
