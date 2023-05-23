@@ -21,7 +21,7 @@ export function Navbar({ element }: NavbarTypes) {
       }, [element]);
 
     return (
-        <nav className={`py-3 fixed w-full top-8 z-10 transition-all ${isVisible && 'bg-white top-[0_!important] shadow-sm'} tablet:bg-white tablet:top-0 tablet:shadow-sm`}>
+        <nav className={`py-3 fixed w-full top-8 z-20 transition-all ${isVisible && 'bg-white top-[0_!important] shadow-sm'} tablet:bg-white tablet:top-0 tablet:shadow-sm`}>
             <div className='container flex justify-between items-center'>
                 <div className='flex space-x-8 items-center'>
                     <Image quality={100} priority src="/logo.png" alt="" width={130} height={130} />

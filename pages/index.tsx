@@ -5,6 +5,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import * as Accordion from '@radix-ui/react-accordion';
 import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/Accordion';
 import Image from 'next/image'
+import { Project } from '@/components/Project';
 
 const accordionItems = [
   {
@@ -65,6 +66,72 @@ const accordionItems = [
   },
 ];
 
+const projects = [
+  {
+    id: 1,
+    title: 'Projeto 1',
+    description: 'Descrição do Projeto 1',
+    img: '/projeto1.png',
+    link: 'https://www.exemplo.com/projeto1',
+    category: 'Website'
+  },
+  {
+    id: 2,
+    title: 'Projeto 2',
+    description: 'Descrição do Projeto 2',
+    img: '/projeto2.png',
+    link: 'https://www.exemplo.com/projeto2',
+    category: 'Landing Page'
+  },
+  {
+    id: 3,
+    title: 'Projeto 3',
+    description: 'Descrição do Projeto 3',
+    img: '/projeto3.png',
+    link: 'https://www.exemplo.com/projeto3',
+    category: 'Landing Page'
+  },
+  {
+    id: 3,
+    title: 'Projeto 3',
+    description: 'Descrição do Projeto 3',
+    img: '/projeto3.png',
+    link: 'https://www.exemplo.com/projeto3',
+    category: 'Landing Page'
+  },{
+    id: 3,
+    title: 'Projeto 3',
+    description: 'Descrição do Projeto 3',
+    img: '/projeto3.png',
+    link: 'https://www.exemplo.com/projeto3',
+    category: 'Landing Page'
+  },
+  {
+    id: 3,
+    title: 'Projeto 3',
+    description: 'Descrição do Projeto 3',
+    img: '/projeto3.png',
+    link: 'https://www.exemplo.com/projeto3',
+    category: 'Landing Page'
+  },
+  {
+    id: 3,
+    title: 'Projeto 3',
+    description: 'Descrição do Projeto 3',
+    img: '/projeto3.png',
+    link: 'https://www.exemplo.com/projeto3',
+    category: 'Landing Page'
+  },
+  {
+    id: 3,
+    title: 'Projeto 3',
+    description: 'Descrição do Projeto 3',
+    img: '/projeto3.png',
+    link: 'https://www.exemplo.com/projeto3',
+    category: 'Landing Page'
+  }
+];
+
 export default function Home() {
 
   const [currentElement, setCurrentElement] = useState<HTMLDivElement | null>()
@@ -99,7 +166,7 @@ export default function Home() {
         </div>
         <Mockups />
       </header>
-      <main className='relative flex flex-col items-center'>
+      <main>
         <section className='py-32'>
           <div className="container flex justify-between tablet:flex-col">
             <div className='w-2/12 tablet:w-full'>
@@ -176,8 +243,27 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        
+        <section className='py-28'>
+          <div className="container flex justify-between relative items-start">
+            <div className="w-6/12 grid grid-cols-2 gap-8">
+              {projects.map((project) => (
+                <Project
+                  key={project.id}
+                  category={project.category}
+                  title={project.title}
+                  description={project.description}
+                  img={project.img}
+                  link={project.link}
+                />
+              ))}
+            </div>
+            <div className="w-5/12 px-8 sticky top-32">
+              <small className='text-sm font-medium text-gray-900'>Cases e soluções</small>
+              <h6 className='text-3xl font-semibold text-gray-900 leading-relaxed my-5'><span className='text-primary-500'>Empresas</span> como a sua estão <span className='text-primary-500'>redesenhando</span>  a forma como projetam</h6>
+              <Button primary={true}>Iniciar projeto</Button>
+            </div>
+          </div>
+        </section>
       </main>
     </Fragment>
   )
