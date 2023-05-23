@@ -27,11 +27,11 @@ export function Navbar({ element }: NavbarTypes) {
       }, [element]);
 
     return (
-        <nav className={`py-3 fixed w-full top-8 z-10 transition-all ${isVisible && 'bg-white top-0 shadow-sm'}`}>
+        <nav className={`py-3 fixed w-full top-8 z-10 transition-all ${isVisible && 'bg-white top-[0_!important] shadow-sm'} tablet:bg-white tablet:top-0 tablet:shadow-sm`}>
             <div className='container flex justify-between items-center'>
                 <div className='flex space-x-8 items-center'>
                     <Image src="/logo.png" alt="" width={130} height={130} />
-                    <ul className='flex space-x-8'>
+                    <ul className='flex space-x-8 tablet:hidden'>
                         <li className='text-sm text-gray-900'><a href="">Início</a></li>
                         <li className='text-sm text-gray-900'><a href="">Sobre a vibe</a></li>
                         <li className='text-sm text-gray-900'>Serviços</li>
@@ -40,11 +40,11 @@ export function Navbar({ element }: NavbarTypes) {
                     </ul>
                 </div>
                 <div className='flex space-x-4'>
-                    <Button white={true}>
+                    <Button white={true} className="mobile:fixed mobile:bottom-0 mobile:w-full mobile:left-0">
                         <img src="/whatsapp.svg" alt="" />
                         Falar com a Vibecriativa
                     </Button>
-                    <Button white={true} outline={true} primary={isVisible}>Iniciar projeto</Button>
+                    <Button className="tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isVisible}>Iniciar projeto</Button>
                 </div>
             </div>
         </nav>

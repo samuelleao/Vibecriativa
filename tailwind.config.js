@@ -41,7 +41,7 @@ module.exports = {
       screens: {
         mobile: "100%",
         notbook: "80rem",
-        tablet: "61.5rem",
+        tablet: "70rem",
         desktop: "85rem",
       },
     },
