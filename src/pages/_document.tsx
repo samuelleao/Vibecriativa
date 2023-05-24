@@ -4,9 +4,9 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta name="keywords" content="agência de software, marketing digital, desenvolvimento de software, soluções digitais, SEO, otimização de sites, mídia social, marketing de conteúdo" />
-        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=7" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

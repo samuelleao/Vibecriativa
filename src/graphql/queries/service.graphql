@@ -1,0 +1,15 @@
+query Service($slug: String!) {
+  service(where: { url: $slug }) {
+    title
+    subtitle
+    description
+    differential {
+      ... on Differential {
+        id
+        title
+        icon
+        description
+      }
+    }
+  }
+}

@@ -1,29 +1,41 @@
-import { Button } from '@/components/Button'
-import { Mockups } from '@/components/Mockups'
-import { Navbar } from '@/components/Navbar'
+import { Button } from '@components/Button'
+import { Mockups } from '@components/Mockups'
+import { Navbar } from '@components/Navbar'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import * as Accordion from '@radix-ui/react-accordion';
-import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/Accordion';
+import { AccordionContent, AccordionItem, AccordionTrigger } from '@components/Accordion';
 import Image from 'next/image'
-import { Project } from '@/components/Project';
-import { accordionItems, projects } from '../../data/home';
+import { Project } from '@components/Project';
+import { projects } from '../../data/home';
 import Link from 'next/link';
 import Head from 'next/head';
-import { Footer } from '@/components/Footer';
+import { Footer } from '@components/Footer';
+import { GetServicesInHomeDocument, useGetServicesInHomeQuery } from 'generated/graphql';
+import { GetStaticProps } from 'next/types';
+import { client, ssrCache } from '@lib/urql';
 
 export default function Home() {
+
+    const [{ data }] = useGetServicesInHomeQuery()
 
     const [currentElement, setCurrentElement] = useState<HTMLDivElement | null>()
 
     const processRef = useRef<HTMLDivElement | null>(null);
 
-    useEffect(function () { setCurrentElement(processRef?.current) }, [])
+    const [currentImage, setCurrentImage] = useState<string | null | undefined>('');
 
-    const [currentImage, setCurrentImage] = useState(accordionItems[0].image);
-
-    function handleAccordionItemClick(image: string) {
+    function handleAccordionItemClick(image: string | null | undefined) {
         setCurrentImage(image);
     };
+
+    useEffect(function () {
+        setCurrentElement(processRef?.current)
+    }, [])
+
+    useEffect(function () {
+        setCurrentElement(processRef?.current)
+        setCurrentImage(data?.services[0].illustrationExternalPage)
+    }, [data])
 
     return (
         <Fragment>
@@ -49,7 +61,7 @@ export default function Home() {
                     </div>
                     <Mockups />
                 </div>
-               
+
             </header>
             <main className='mt-4'>
                 <div ref={processRef} className='sticky top-32'></div>
@@ -99,32 +111,36 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="container flex tablet:flex-col">
-                        <div className='tablet:hidden bg-secondary-500 rounded-t-2xl flex-1 relative flex justify-center items-center'>
-                            <Image
-                                className='w-[31.25rem] h-auto'
-                                src={currentImage}
-                                alt="Imagem Ilustrativa do Serviço"
-                                quality={100}
-                                width={500}
-                                height={500}
-                            />
+                        <div className='tablet:hidden py-8 bg-secondary-500 rounded-t-2xl flex-1 relative flex justify-center items-center'>
+                            {currentImage && (
+                                <Image
+                                    className='w-[31.25rem] h-auto'
+                                    src={currentImage}
+                                    alt="Imagem Ilustrativa do Serviço"
+                                    quality={100}
+                                    width={640}
+                                    height={500}
+                                />
+                            )}
                         </div>
                         <div className='p-14 tablet:py-0 tablet:px-0 pb-0 rounded-t-2xl flex-1 space-y-7 tablet:w-full'>
-                            <Accordion.Root type="single" defaultValue="item-1" collapsible>
-                                {accordionItems.map((item) => (
-                                    <AccordionItem key={item.value} value={item.value}>
-                                        <AccordionTrigger onClick={() => handleAccordionItemClick(item.image)}>
-                                            {item.label}
+                            {data && <Accordion.Root type="single" defaultValue={data.services[0].id} collapsible>
+                                {data.services.map((item) => (
+                                    <AccordionItem key={item.id} value={item.id}>
+                                        <AccordionTrigger onClick={() => handleAccordionItemClick(item.illustrationExternalPage)}>
+                                            {item.title}
                                         </AccordionTrigger>
                                         <AccordionContent>
-                                            <p className="text-sm font-normal text-gray-600">{item.content}</p>
-                                            <a href={item.link} className="text-sm font-medium text-blue-600">
+                                            {item.description && (
+                                                <p className="text-sm font-normal text-gray-600">{item.description.slice(0, 150)} ...</p>
+                                            )}
+                                            <Link href={`servico/${item.url}`} className="text-sm font-medium text-blue-600">
                                                 Ver mais sobre este serviço
-                                            </a>
+                                            </Link>
                                         </AccordionContent>
                                     </AccordionItem>
                                 ))}
-                            </Accordion.Root>
+                            </Accordion.Root>}
                         </div>
                     </div>
                 </section>
@@ -153,4 +169,16 @@ export default function Home() {
             </main>
         </Fragment>
     )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+    await Promise.all([
+        client.query(GetServicesInHomeDocument, { slug: 'services' }).toPromise(),
+    ])
+
+    return {
+        props: {
+            urqlState: ssrCache.extractData()
+        }
+    }
 }

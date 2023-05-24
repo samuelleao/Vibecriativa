@@ -17,6 +17,9 @@ export function Navbar({ element }: NavbarTypes) {
             });
 
             observer.observe(element);
+        }else{
+            setIsVisible(true);
+
         }
 
     }, [element]);
@@ -27,7 +30,7 @@ export function Navbar({ element }: NavbarTypes) {
                 <div className='flex space-x-8 items-center'>
                     <Image quality={100} priority src="/logo.png" alt="Vibecriativa Logotipo" width={130} height={130} />
                     <ul className='flex space-x-8 tablet:hidden'>
-                        <li className='text-sm text-gray-900'><Link href="home">Início</Link></li>
+                        <li className='text-sm text-gray-900'><Link href="/home">Início</Link></li>
                         <li className='text-sm text-gray-900'><Link href="sobre">Sobre a vibe</Link></li>
                         <li className='text-sm text-gray-900'>Serviços</li>
                         <li className='text-sm text-gray-900'><Link href="#portfolio">Portfólio</Link></li>

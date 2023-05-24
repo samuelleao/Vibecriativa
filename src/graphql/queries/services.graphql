@@ -1,0 +1,10 @@
+query GetServicesInHome {
+  services {
+    title
+    subtitle
+    description
+    id
+    url
+    illustrationExternalPage
+  }
+}
