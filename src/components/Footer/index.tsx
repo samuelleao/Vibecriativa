@@ -3,8 +3,13 @@ import { Button } from "../Button";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegram, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useGetServicesQuery } from "generated/graphql";
+import { LinkWhatsapp } from "@components/LinkWhatsapp";
 
 export function Footer() {
+
+    const [{ data }] = useGetServicesQuery();
+
     return (
         <Fragment>
             <section className={`bg-[url('/footer.jpg')] py-40 bg-fixed bg-no-repeat bg-cover tablet:py-20`}>
@@ -20,25 +25,21 @@ export function Footer() {
                     <div className="grid grid-cols-3 w-8/12 tablet:w-full tablet:grid-cols-1 tablet:gap-32 tablet:mt-32">
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-gray-50'>Institucional</li>
-                            <li className='text-sm font-medium text-gray-400'>Sobre a vibe</li>
-                            <li className='text-sm font-medium text-gray-400'>Serviços</li>
-                            <li className='text-sm font-medium text-gray-400'>Portfólio</li>
-                            <li className='text-sm font-medium text-gray-400'>Falar com a vibe</li>
-                            <li className='text-sm font-medium text-gray-400'>Iniciar projeto</li>
-                            <li className='text-sm font-medium text-gray-400'>Nossos Processos</li>
+                            <li className='text-sm font-medium text-gray-400 hover:text-gray-200'><Link href="/sobre">Sobre a vibe</Link></li>
+                            <li className='text-sm font-medium text-gray-400 hover:text-gray-200'><Link href="/home#portfolio">Portfólio</Link></li>
+                            <li className='text-sm font-medium text-gray-400 hover:text-gray-200'><LinkWhatsapp>Falar com a vibe</LinkWhatsapp></li>
+                            <li className='text-sm font-medium text-gray-400 hover:text-gray-200'>Iniciar projeto</li>
                         </ul>
                         <ul className='space-y-10'>
-                            <li className='text-sm font-semibold text-gray-50'>Institucional</li>
-                            <li className='text-sm font-medium text-gray-400'>Website</li>
-                            <li className='text-sm font-medium text-gray-400'>Landing Page</li>
-                            <li className='text-sm font-medium text-gray-400'>Sistema</li>
-                            <li className='text-sm font-medium text-gray-400'>Blog</li>
-                            <li className='text-sm font-medium text-gray-400'>Aplicativo</li>
+                            <li className='text-sm font-semibold text-gray-50'>Serviços</li>
+                            {data?.services?.map((item) => (
+                                <li className='text-sm font-medium text-gray-400 hover:text-gray-200'><Link href={`servico/${item.url}`}>{item.title}</Link></li>
+                            ))}
                         </ul>
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-gray-50'>Dúvidas</li>
-                            <li className='text-sm font-medium text-gray-400'>Falar no whatsapp</li>
-                            <li className='text-sm font-medium text-gray-400'>Enviar email</li>
+                            <li className='text-sm font-medium text-gray-400 hover:text-gray-200'><LinkWhatsapp>Falar no whatsapp</LinkWhatsapp></li>
+                            <li className='text-sm font-medium text-gray-400 hover:text-gray-200'>Enviar email</li>
                         </ul>
                     </div>
                     <div className="flex-1">
