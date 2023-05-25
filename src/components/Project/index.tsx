@@ -1,17 +1,17 @@
 import React from 'react';
-import { Button } from '../Button';
+import { Button } from '@components/Button';
 import Link from 'next/link';
 import Image from 'next/image'
 
 interface ProjectProps {
     title: string;
     description: string;
-    img: string;
+    img?: string;
     link: string;
     category: string;
 }
 
-export function Project({ title, description, img, link, category }: ProjectProps) {
+export function Project({ title, description, img = "", link, category }: ProjectProps) {
     return (
         <article>
             <div className="h-52 relative overflow-hidden rounded-lg bg-gray-100 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black/20 before:z-10">

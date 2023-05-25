@@ -10,13 +10,15 @@ import { projects } from '../../data/home';
 import Link from 'next/link';
 import Head from 'next/head';
 import { Footer } from '@components/Footer';
-import { GetServicesDocument, useGetPageQuery, useGetServicesQuery } from 'generated/graphql';
+import { GetServicesDocument, useGetPageQuery, useGetProjectsQuery, useGetServicesQuery } from 'generated/graphql';
 import { GetStaticProps } from 'next/types';
 import { client, ssrCache } from '@lib/urql';
 
 export default function Home() {
 
     const [{ data }] = useGetServicesQuery()
+
+    const [{ data: projects }] = useGetProjectsQuery()
 
     const [currentElement, setCurrentElement] = useState<HTMLDivElement | null>()
 
@@ -147,14 +149,14 @@ export default function Home() {
                 <section className='py-28' id="portfolio">
                     <div className="container flex justify-between relative items-start tablet:flex-col-reverse">
                         <div className="w-6/12 grid grid-cols-2 gap-8 tablet:w-full tablet:grid-cols-1 tablet:mt-32">
-                            {projects.map((project) => (
+                            {projects?.portfolios.map((project) => (
                                 <Project
-                                    key={project.id}
-                                    category={project.category}
+                                    key={project.title}
+                                    category={`${project.category}`}
                                     title={project.title}
                                     description={project.description}
-                                    img={project.img}
-                                    link={project.link}
+                                    img={`${project.img}`}
+                                    link={project.url}
                                 />
                             ))}
                         </div>

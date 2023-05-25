@@ -1,0 +1,9 @@
+query GetProjects {
+  portfolios {
+    title
+    description
+    category
+    url
+    img
+  }
+}

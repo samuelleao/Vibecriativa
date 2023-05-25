@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Button } from "../Button";
+import { Button } from "@components/Button";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegram, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,7 +33,7 @@ export function Footer() {
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-gray-50'>Serviços</li>
                             {data?.services?.map((item) => (
-                                <li className='text-sm font-medium text-gray-400 hover:text-gray-200'><Link href={`servico/${item.url}`}>{item.title}</Link></li>
+                                <li className='text-sm font-medium text-gray-400 hover:text-gray-200' key={item.title}><Link href={`/servico/${item.url}`}>{item.title}</Link></li>
                             ))}
                         </ul>
                         <ul className='space-y-10'>
