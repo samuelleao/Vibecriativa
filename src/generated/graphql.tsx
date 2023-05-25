@@ -4851,6 +4851,13 @@ export enum _SystemDateTimeFieldVariation {
   Localization = 'localization'
 }
 
+export type GetPageQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type GetPageQuery = { __typename?: 'Query', page?: { __typename?: 'Page', content: { __typename?: 'PageContentRichText', text: string } } | null };
+
 export type ServiceQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
@@ -4858,12 +4865,25 @@ export type ServiceQueryVariables = Exact<{
 
 export type ServiceQuery = { __typename?: 'Query', service?: { __typename?: 'Service', title?: string | null, subtitle?: string | null, description?: string | null, illustrationInternalPage?: string | null, differential: Array<{ __typename?: 'Differential', id: string, title?: string | null, icon?: string | null, description?: string | null }> } | null };
 
-export type GetServicesInHomeQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetServicesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetServicesInHomeQuery = { __typename?: 'Query', services: Array<{ __typename?: 'Service', title?: string | null, subtitle?: string | null, description?: string | null, id: string, url?: string | null, illustrationExternalPage?: string | null }> };
+export type GetServicesQuery = { __typename?: 'Query', services: Array<{ __typename?: 'Service', title?: string | null, subtitle?: string | null, description?: string | null, id: string, url?: string | null, illustrationExternalPage?: string | null }> };
 
 
+export const GetPageDocument = gql`
+    query GetPage($slug: String!) {
+  page(where: {slug: $slug}) {
+    content {
+      text
+    }
+  }
+}
+    `;
+
+export function useGetPageQuery(options: Omit<Urql.UseQueryArgs<GetPageQueryVariables>, 'query'>) {
+  return Urql.useQuery<GetPageQuery, GetPageQueryVariables>({ query: GetPageDocument, ...options });
+};
 export const ServiceDocument = gql`
     query Service($slug: String!) {
   service(where: {url: $slug}) {
@@ -4886,8 +4906,8 @@ export const ServiceDocument = gql`
 export function useServiceQuery(options: Omit<Urql.UseQueryArgs<ServiceQueryVariables>, 'query'>) {
   return Urql.useQuery<ServiceQuery, ServiceQueryVariables>({ query: ServiceDocument, ...options });
 };
-export const GetServicesInHomeDocument = gql`
-    query GetServicesInHome {
+export const GetServicesDocument = gql`
+    query GetServices {
   services {
     title
     subtitle
@@ -4899,6 +4919,6 @@ export const GetServicesInHomeDocument = gql`
 }
     `;
 
-export function useGetServicesInHomeQuery(options?: Omit<Urql.UseQueryArgs<GetServicesInHomeQueryVariables>, 'query'>) {
-  return Urql.useQuery<GetServicesInHomeQuery, GetServicesInHomeQueryVariables>({ query: GetServicesInHomeDocument, ...options });
+export function useGetServicesQuery(options?: Omit<Urql.UseQueryArgs<GetServicesQueryVariables>, 'query'>) {
+  return Urql.useQuery<GetServicesQuery, GetServicesQueryVariables>({ query: GetServicesDocument, ...options });
 };

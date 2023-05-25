@@ -1,0 +1,7 @@
+query GetPage($slug: String!) {
+  page(where: {slug: $slug}) {
+    content {
+      html
+    }
+  }
+}

@@ -10,13 +10,13 @@ import { projects } from '../../data/home';
 import Link from 'next/link';
 import Head from 'next/head';
 import { Footer } from '@components/Footer';
-import { GetServicesInHomeDocument, useGetServicesInHomeQuery } from 'generated/graphql';
+import { GetServicesDocument, useGetPageQuery, useGetServicesQuery } from 'generated/graphql';
 import { GetStaticProps } from 'next/types';
 import { client, ssrCache } from '@lib/urql';
 
 export default function Home() {
 
-    const [{ data }] = useGetServicesInHomeQuery()
+    const [{ data }] = useGetServicesQuery()
 
     const [currentElement, setCurrentElement] = useState<HTMLDivElement | null>()
 
@@ -70,7 +70,7 @@ export default function Home() {
                         <div className='w-2/12 tablet:w-full'>
                             <h2 className='text-lg font-semibold text-gray-900 leading-normal tablet:mb-16'>Nosso processo de qualidade em entregas</h2>
                         </div>
-                        <div className='tablet:w-full tablet:flex notbook:px-4 tablet:flex-col relative w-[900px] grid grid-cols-4 right-0 gap-16 before:z-[-2] before:absolute before:top-0 before:left-0 before:h-[2px] before:bg-gray-200 before:w-[100%] before:top-[7px] tablet:before:h-[100%] tablet:before:w-[2px] tablet:before:left-[23px]'>
+                        <div className='tablet:w-full tablet:flex notbook:px-4 tablet:flex-col relative w-[900px] grid grid-cols-4 right-0 gap-16 before:z-[-2] before:absolute before:top-0 before:left-0 before:h-[0.125rem] before:bg-gray-200 before:w-[100%] before:top-[7px] tablet:before:h-[100%] tablet:before:w-[0.125rem] tablet:before:left-[23px]'>
                             <div className='tablet:flex items-start gap-6'>
                                 <div className='border-2 hover:border-4 transition-all bg-gray-50 border-gray-500 rounded-full w-4 h-4'></div>
                                 <div>
@@ -92,7 +92,7 @@ export default function Home() {
                                     <p className='text-xs font-normal text-gray-500 leading-loose notbook:text-xs'>Prevenção de erros e garantia de qualidade</p>
                                 </div>
                             </div>
-                            <div className='tablet:flex items-start gap-6 relative after:absolute after:right-0 after:w-[calc(100%-16px)] after:top-0 after:h-2 after:top-[5px] after:bg-white tablet:after:h-[calc(100%)] tablet:after:left-[7px] tablet:after:top-[16px] tablet:after:w-[2px] '>
+                            <div className='tablet:flex items-start gap-6 relative after:absolute after:right-0 after:w-[calc(100%-16px)] after:top-0 after:h-2 after:top-[5px] after:bg-white tablet:after:h-[calc(100%)] tablet:after:left-[7px] tablet:after:top-[16px] tablet:after:w-[0.125rem] '>
                                 <div className='border-2 hover:border-4 transition-all bg-gray-50 border-secondary-500 rounded-full w-4 h-4'></div>
                                 <div>
                                     <h3 className='text-sm font-semibold text-gray-900 mt-7 tablet:mt-0 mb-4 whitespace-nowrap'><span className='mr-4'>✨</span> Entrega</h3>
@@ -173,7 +173,7 @@ export default function Home() {
 
 export const getStaticProps: GetStaticProps = async () => {
     await Promise.all([
-        client.query(GetServicesInHomeDocument, { slug: 'services' }).toPromise(),
+        client.query(GetServicesDocument, { slug: 'services' }).toPromise(),
     ])
 
     return {

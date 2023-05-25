@@ -1,4 +1,4 @@
-query GetServicesInHome {
+query GetServices {
   services {
     title
     subtitle
