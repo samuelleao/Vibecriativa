@@ -55,8 +55,8 @@ export function Navbar({ element }: NavbarTypes) {
                                     <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
                                         <ul className="m-0 grid list-none gap-8 p-6 grid-cols-2">
                                             {data?.services?.map((item) => (
-                                                <li className="hover:bg-slate-100 p-3 rounded-lg">
-                                                    <Link href={`/servico/${item.url}`} key={item.title}>
+                                                <li className="hover:bg-slate-100 p-3 rounded-lg" key={item.title}>
+                                                    <Link href={`/servico/${item.url}`}>
                                                         <span className="block text-base text-gray-900 font-medium mb-4">{item.title}</span>
                                                         {item.description && (<small className="block text-xs text-gray-500">{item.description.slice(0, 80)}...</small>)}
                                                     </Link>

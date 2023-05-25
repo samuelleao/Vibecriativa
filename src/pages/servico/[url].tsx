@@ -1,7 +1,7 @@
 import { Footer } from "@components/Footer";
 import { Navbar } from "@components/Navbar";
 import { client, ssrCache } from "@lib/urql";
-import { ServiceDocument, useServiceQuery } from "generated/graphql";
+import { GetServicesDocument, ServiceDocument, useServiceQuery } from "generated/graphql";
 import { GetStaticPaths, GetStaticProps } from "next/types";
 import { Fragment } from "react";
 import Image from "next/image"
@@ -55,11 +55,18 @@ export default function Service({ slug }: any) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+
+    const { data: { services } } = await client.query(GetServicesDocument, {}).toPromise();
+
+    const paths = services.map((item: any) => ({
+        params: { url: item.url },
+    }));
+
     return {
-        paths: [],
-        fallback: 'blocking'
-    }
-}
+        paths,
+        fallback: 'blocking',
+    };
+};
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
     await client.query(ServiceDocument, { slug: params.url }).toPromise()
