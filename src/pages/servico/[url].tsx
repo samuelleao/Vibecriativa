@@ -26,7 +26,7 @@ export default function Service({ slug }: any) {
                     <h1 className="text-5xl font-semibold text-gray-900 tablet:text-3xl">{data?.service?.title}</h1>
                     <h2 className="text-sm font-semibold text-gray-900 ">{data?.service?.subtitle}</h2>
                     <p className="text-base font-normal text-gray-900 tablet:text-sm leading-relaxed">{data?.service?.description}</p>
-                    <Image className="mb-[-25%_!important]" src="/services/internal/landingpage.svg" width={1240} height={540} alt={`Imagem ilustrando o serviço de ${data?.service?.title}`} />
+                    <Image className="mb-[-25%_!important]" src={`${data?.service?.illustrationInternalPage}`} width={1240} height={540} alt={`Imagem ilustrando o serviço de ${data?.service?.title}`} />
                 </div>
             </header>
             <main>

@@ -1,0 +1,56 @@
+<svg width="500" height="506" viewBox="0 0 500 506" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_147_1829)">
+<g filter="url(#filter0_d_147_1829)">
+<rect width="500" height="506" rx="16" fill="white"/>
+</g>
+</g>
+<circle cx="25.5" cy="28.5" r="5.5" fill="#EA356B"/>
+<circle cx="40.5" cy="28.5" r="5.5" fill="#EAD835"/>
+<circle cx="55.5" cy="28.5" r="5.5" fill="#35EA68"/>
+<rect x="24" y="93" width="54" height="26" rx="13" fill="#1877F2"/>
+<rect x="87" y="93" width="54" height="26" rx="13" fill="#F5F5F6"/>
+<rect x="149" y="93" width="54" height="26" rx="13" fill="#F5F5F6"/>
+<rect x="212" y="93" width="54" height="26" rx="13" fill="#F5F5F6"/>
+<rect x="275" y="93" width="53" height="26" rx="13" fill="#F5F5F6"/>
+<rect x="24" y="153" width="452" height="40" rx="8" fill="#F5F5F6"/>
+<rect x="36" y="161" width="24" height="24" rx="7.21608" fill="#CED4DA"/>
+<circle cx="453" cy="173" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="439.25" cy="173" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="425.5" cy="173" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<rect x="24" y="217" width="452" height="40" rx="8" fill="#F5F5F6"/>
+<rect x="36" y="225" width="24" height="24" rx="7.21608" fill="#CED4DA"/>
+<circle cx="453" cy="237" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="439.25" cy="237" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="425.5" cy="237" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<rect x="24" y="281" width="452" height="40" rx="8" fill="#F5F5F6"/>
+<rect x="36" y="289" width="24" height="24" rx="7.21608" fill="#CED4DA"/>
+<circle cx="453" cy="301" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="439.25" cy="301" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="425.5" cy="301" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<rect x="24" y="345" width="452" height="40" rx="8" fill="#F5F5F6"/>
+<rect x="36" y="353" width="24" height="24" rx="7.21608" fill="#CED4DA"/>
+<circle cx="453" cy="365" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="439.25" cy="365" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="425.5" cy="365" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<rect x="24" y="409" width="452" height="40" rx="8" fill="#F5F5F6"/>
+<rect x="36" y="417" width="24" height="24" rx="7.21608" fill="#CED4DA"/>
+<circle cx="453" cy="429" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="439.25" cy="429" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<circle cx="425.5" cy="429" r="10.098" fill="#CED4DA" stroke="#E9ECEF" stroke-width="1.80402"/>
+<defs>
+<filter id="filter0_d_147_1829" x="-40" y="-36" width="580" height="586" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="10" operator="erode" in="SourceAlpha" result="effect1_dropShadow_147_1829"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="25"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_147_1829"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_147_1829" result="shape"/>
+</filter>
+<clipPath id="clip0_147_1829">
+<rect width="500" height="506" fill="white"/>
+</clipPath>
+</defs>
+</svg>

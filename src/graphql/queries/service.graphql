@@ -3,6 +3,7 @@ query Service($slug: String!) {
     title
     subtitle
     description
+    illustrationInternalPage
     differential {
       ... on Differential {
         id

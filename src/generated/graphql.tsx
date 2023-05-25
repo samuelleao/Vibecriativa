@@ -4856,7 +4856,7 @@ export type ServiceQueryVariables = Exact<{
 }>;
 
 
-export type ServiceQuery = { __typename?: 'Query', service?: { __typename?: 'Service', title?: string | null, subtitle?: string | null, description?: string | null, differential: Array<{ __typename?: 'Differential', id: string, title?: string | null, icon?: string | null, description?: string | null }> } | null };
+export type ServiceQuery = { __typename?: 'Query', service?: { __typename?: 'Service', title?: string | null, subtitle?: string | null, description?: string | null, illustrationInternalPage?: string | null, differential: Array<{ __typename?: 'Differential', id: string, title?: string | null, icon?: string | null, description?: string | null }> } | null };
 
 export type GetServicesInHomeQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -4870,6 +4870,7 @@ export const ServiceDocument = gql`
     title
     subtitle
     description
+    illustrationInternalPage
     differential {
       ... on Differential {
         id
