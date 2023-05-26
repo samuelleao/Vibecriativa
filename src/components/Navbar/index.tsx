@@ -81,12 +81,10 @@ export function Navbar({ element }: NavbarTypes) {
                             <NavigationMenu.Viewport className="shadow-lg data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[10px] h-[var(--radix-navigation-menu-viewport-height)] w-[42.5rem] origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
                         </div>
                     </NavigationMenu.Root>
-
-
                 </div>
                 <div className='flex space-x-4'>
                     <LinkWhatsapp>
-                        <Button white={true} className="mobile:fixed mobile:bottom-0 mobile:w-full mobile:left-0">
+                        <Button white={true} className="notbook:fixed notbook:rounded-none notbook:bottom-0 notbook:w-full notbook:left-0">
                             <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
                             Falar com a Vibecriativa
                         </Button>

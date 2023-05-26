@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['vibecriativa.vercel.app'],
+    domains: ['vibecriativa.vercel.app', 'localhost'],
   },
 }
 

@@ -2,14 +2,19 @@ import { Footer } from "@components/Footer";
 import { Navbar } from "@components/Navbar";
 import { Fragment } from "react";
 import Image from "next/image"
+import Head from "next/head";
 
 export default function About() {
     return (
         <Fragment>
+            <Head>
+                <title>Vibecriativa | Sobre</title>
+                <meta name="description" content=""/>
+            </Head>
             <Navbar />
             <header className="pt-60 pb-32 bg-[url('/about.png')] bg-fixed bg-no-repeat bg-bottom bg-cover">
                 <div className="container flex justify-center">
-                    <div className="w-[41.5rem]">
+                    <div className="max-w-[41.5rem]">
                         <h1 className="text-4xl font-semibold mb-14 text-gray-50 mobile:text-xl">Sobre a vibecriativa</h1>
                         <p className="text-xl font-medium text-gray-50">Um caminho sobre nossa história</p>
                     </div>
@@ -17,7 +22,7 @@ export default function About() {
             </header>
             <section className="py-36 mobile:py-20">
                 <div className="container  flex justify-center">
-                    <div className="w-[41.5rem]">
+                    <div className="max-w-[41.5rem]">
                         <div className="space-y-36 mobile:space-y-16">
                             <div className="flex gap-6 items-center mobile:flex-col mobile:items-start">
                                 <div className="h-12 px-3 rounded-lg flex items-center justify-center border-2 border-gray-100"><span>💡</span></div>
