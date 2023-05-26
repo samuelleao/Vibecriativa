@@ -29,7 +29,8 @@ module.exports = {
     },
     screens: {
       desktop: { max: "1735px" },
-      notbook: { max: "1530px" },
+      notbook1: { max: "1430px" },
+      notbook2: { max: "1278px" },
       tablet: { max: "1000px" },
       mobile: { max: "740px" },
     },

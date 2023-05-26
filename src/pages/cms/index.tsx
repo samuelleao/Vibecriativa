@@ -79,77 +79,75 @@ export default function CMS() {
                     <div className="w-[60rem] max-w-full">
                         <h1 className="text-3xl text-gray-900 font-semibold text-center mb-32">Valores dos nossos planos</h1>
                         <div className="flex gap-12 tablet:flex-col">
-                            <div className="w-[300px] tablet:w-full p-4 bg-white rounded-lg shadow-lg">
-                                <h5 className="mb-4 text-xl font-medium text-gray-500">Plano Padrão</h5>
+                            <div className="w-[300px] tablet:w-full p-6 bg-white rounded-lg shadow-lg">
+                                <h5 className="mb-4 text-lg font-medium text-gray-500">Plano Padrão</h5>
                                 <div className="flex items-baseline text-gray-900 dark:text-white">
-                                    <span className="text-5xl font-extrabold text-gray-900">R$ 500</span>
+                                    <span className="text-4xl font-bold text-gray-900">R$ 500</span>
                                 </div>
                                 <ul role="list" className="space-y-5 my-7">
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-900">Edição de textos</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-900">Edição de textos</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-900">Edição de imagens</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-900">Edição de imagens</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-900">1 acesso</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-900">1 acesso</span>
                                     </li>
                                     <li className="flex space-x-3 line-through decoration-gray-500">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-500">Upload de arquivos</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-500">Upload de arquivos</span>
                                     </li>
                                     <li className="flex space-x-3 line-through decoration-gray-500">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-500">Edição de produtos</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-500">Edição de produtos</span>
                                     </li>
                                     <li className="flex space-x-3 line-through decoration-gray-500">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-gray-400 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-500">Edição de colaboradores</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-500">Edição de colaboradores</span>
                                     </li>
                                 </ul>
                                 <Button className="w-full" primary={true}>Entrar em contato</Button>
                             </div>
-                            <div className="flex-1 p-4 bg-primary-500 rounded-lg shadow-lg">
-                                <h5 className="mb-4 text-xl font-medium text-gray-50">Plano</h5>
+                            <div className="flex-1 p-6 bg-primary-500 rounded-lg shadow-lg">
+                                <h5 className="mb-4 text-lg font-medium text-gray-50">Plano</h5>
                                 <div className="flex items-baseline text-gray-50 dark:text-white">
-                                    <span className="text-4xl font-extrabold text-gray-50 tablet:text-lg">Personalizado</span>
+                                    <span className="text-4xl font-bold text-gray-50 tablet:text-lg">Personalizado</span>
                                 </div>
                                 <ul role="list" className="space-y-5 my-7">
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-50">Edição de textos</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-50">Edição de textos</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-50">Edição de imagens</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-50">Edição de imagens</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-50">4 acesso</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-50">Upload de arquivos</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-50">4 acesso</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-50">Edição de produtos</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-50">4 acesso</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-50">Suporte dentro do horário comercial</span>
                                     </li>
                                     <li className="flex space-x-3">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-blue-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                        <span className="text-base font-normal leading-tight text-gray-50">4 acesso</span>
+                                        <span className="text-sm font-normal leading-tight text-gray-50">Edição de colaboradores</span>
                                     </li>
-
                                 </ul>
                                 <Button className="w-full">Entrar em contato</Button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
             <Footer />
         </Fragment>

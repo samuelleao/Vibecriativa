@@ -84,7 +84,7 @@ export function Navbar({ element }: NavbarTypes) {
                 </div>
                 <div className='flex space-x-4'>
                     <LinkWhatsapp>
-                        <Button white={true} className="notbook:fixed notbook:rounded-none notbook:bottom-0 notbook:w-full notbook:left-0">
+                        <Button white={true} className="notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
                             <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
                             Falar com a Vibecriativa
                         </Button>

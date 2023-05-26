@@ -12,9 +12,10 @@ export default function About() {
                 <meta name="description" content=""/>
             </Head>
             <Navbar />
-            <header className="pt-60 pb-32 bg-[url('/about.png')] bg-fixed bg-no-repeat bg-bottom bg-cover">
-                <div className="container flex justify-center">
-                    <div className="max-w-[41.5rem]">
+            <header className="pt-60 pb-32 relative">
+                <Image className="absolute top-0 left-0 w-full h-full object-cover z-0" src="/about.webp" width={1360} height={500} alt="Imagem de pessoas programando em computadores" />
+                <div className="container flex justify-center relative">
+                    <div className="w-[41.5rem] max-w-ful flex flex-col items-start justify-start">
                         <h1 className="text-4xl font-semibold mb-14 text-gray-50 mobile:text-xl">Sobre a vibecriativa</h1>
                         <p className="text-xl font-medium text-gray-50">Um caminho sobre nossa história</p>
                     </div>

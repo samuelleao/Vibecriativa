@@ -45,7 +45,7 @@ export default function Home() {
                 <title>Vibecriativa</title>
             </Head>
             <Navbar element={currentElement} />
-            <header className='overflow-hidden flex tablet:flex-col relative before:z-[-2] before:absolute before:top-0 tablet:before:hidden before:right-0 before:h-full before:w-5/12 before:bg-gradient-to-r before:to-cyan-500 before:from-blue-700 h-screen tablet:h-auto'>
+            <header className='overflow-hidden flex tablet:flex-col relative before:z-[-2] before:absolute before:top-0 tablet:before:hidden before:right-0 before:h-full before:w-5/12 notbook2:before:w-3/12 before:bg-gradient-to-r before:to-cyan-500 before:from-blue-700 h-screen tablet:h-auto'>
                 <div className="container flex tablet:flex-col">
                     <div className='h-full w-[33%] tablet:w-full flex flex-col justify-center tablet:justify-start tablet:pt-60 mobile:pt-32 gap-8'>
                         <h1 className='text-5xl tablet:text-2xl font-semibold text-gray-900 leading-normal'>Criando e convertendo em <span className='text-secondary-500'>valor</span> para você</h1>
@@ -72,7 +72,7 @@ export default function Home() {
                         <div className='w-2/12 tablet:w-full'>
                             <h2 className='text-lg font-semibold text-gray-900 leading-normal tablet:mb-16'>Nosso processo de qualidade em entregas</h2>
                         </div>
-                        <div className='tablet:w-full tablet:flex notbook:px-4 tablet:flex-col relative w-[900px] grid grid-cols-4 right-0 gap-16 before:z-[-2] before:absolute before:top-0 before:left-0 before:h-[0.125rem] before:bg-gray-200 before:w-[100%] before:top-[7px] tablet:before:h-[100%] tablet:before:w-[0.125rem] tablet:before:left-[23px]'>
+                        <div className='tablet:w-full tablet:flex notbook:px-4 tablet:flex-col relative w-[900px] grid grid-cols-4 right-0 gap-16 before:z-[-2] before:absolute before:top-0 before:left-0 before:h-[0.125rem] before:bg-gray-200 before:w-[100%] before:top-[7px] tablet:before:h-[100%] tablet:before:w-[0.125rem] tablet:before:left-2'>
                             <div className='tablet:flex items-start gap-6'>
                                 <div className='border-2 hover:border-4 transition-all bg-gray-50 border-gray-500 rounded-full w-4 h-4'></div>
                                 <div>
@@ -94,7 +94,7 @@ export default function Home() {
                                     <p className='text-xs font-normal text-gray-500 leading-loose notbook:text-xs'>Prevenção de erros e garantia de qualidade</p>
                                 </div>
                             </div>
-                            <div className='tablet:flex items-start gap-6 relative after:absolute after:right-0 after:w-[calc(100%-16px)] after:top-0 after:h-2 after:top-[5px] after:bg-white tablet:after:h-[calc(100%)] tablet:after:left-[7px] tablet:after:top-[16px] tablet:after:w-[0.125rem] '>
+                            <div className='tablet:flex items-start gap-6 relative after:absolute after:right-0 after:w-[calc(100%-16px)] after:h-2 after:top-[5px] after:bg-white tablet:after:h-[calc(100%)] tablet:after:left-2 tablet:after:top-[16px] tablet:after:w-[0.125rem] '>
                                 <div className='border-2 hover:border-4 transition-all bg-gray-50 border-secondary-500 rounded-full w-4 h-4'></div>
                                 <div>
                                     <h3 className='text-sm font-semibold text-gray-900 mt-7 tablet:mt-0 mb-4 whitespace-nowrap'><span className='mr-4'>✨</span> Entrega</h3>
@@ -105,8 +105,8 @@ export default function Home() {
                     </div>
                 </section>
                 <section>
-                    <div className="container flex justify-center  pb-48">
-                        <div className='w-[852px] tablet:w-full text-center space-y-4 flex flex-col items-center'>
+                    <div className="container flex justify-center  pb-48 tablet:pb-32">
+                        <div className='w-[852px] tablet:w-full tablet:text-left tablet:items-start text-center space-y-4 flex flex-col items-center'>
                             <h4 className='text-5xl tablet:text-2xl font-semibold text-gray-900 leading-normal'><span className='text-primary-500'>Serviços</span> e soluções que desenvolvemos para você</h4>
                             <p className='text-base font-normal text-gray-600'>Você pode nos consultar caso esteja em dúvida em qual seria a melhor solução para sua ideia</p>
                             <Button black>Iniciar projeto</Button>

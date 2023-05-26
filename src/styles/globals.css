@@ -5,3 +5,7 @@
 * {
     scroll-behavior: smooth;
 }
+
+html {
+    font-family: var(--font-poppins);
+}
