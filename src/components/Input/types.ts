@@ -10,5 +10,7 @@ export interface InputTypes extends React.InputHTMLAttributes<HTMLInputElement>{
     required?: boolean,
     register?: any,
     registerName?: string,
-    icon?: any
+    icon?: any,
+    subLabel?: string,
+    defaultChecked?: boolean;
 }

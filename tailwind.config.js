@@ -50,5 +50,8 @@ module.exports = {
       sans: "'Poppins', sans-serif"
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    // ...
+  ],
 }

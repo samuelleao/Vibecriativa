@@ -89,7 +89,9 @@ export function Navbar({ element }: NavbarTypes) {
                             Falar com a Vibecriativa
                         </Button>
                     </LinkWhatsapp>
-                    <Button className="tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isVisible}>Iniciar projeto</Button>
+                    <Link href="/iniciarprojeto">
+                        <Button className="tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isVisible}>Iniciar projeto</Button>
+                    </Link>
                 </div>
             </div>
         </nav>
