@@ -56,7 +56,7 @@ const services = [
                 id: 2,
             }
         ],
-        page: "/servico/softhouse"
+        page: "/servico/martketing-digital"
     },
     {
         name: "🎨  Criação",
@@ -159,7 +159,7 @@ export default function Home() {
             <main className='mt-4'>
                 <div ref={processRef} className='sticky top-32'></div>
                 <section className='py-32 bg-slate-50'>
-                    <div className="mx-auto max-w-full tablet:px-4 w-[55.813rem] max-w-ful flex flex-col items-start justify-start">
+                    <div className="mx-auto max-w-full tablet:px-4 w-[55.813rem] flex flex-col items-start justify-start">
                         <div className='mb-16 px-10 tablet:px-0 tablet:text-left tablet:items-start text-center space-y-4 flex flex-col items-center'>
                             <h4 className='text-4xl tablet:text-2xl font-semibold text-slate-900 leading-normal'><span className='text-primary-500'>Serviços</span> e soluções que desenvolvemos para você</h4>
                             <p className='px-32 tablet:px-0 text-base tablet:text-sm font-normal text-slate-600'>Você pode nos consultar caso esteja em dúvida em qual seria a melhor solução para sua ideia</p>

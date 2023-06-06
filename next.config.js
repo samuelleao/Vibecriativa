@@ -14,6 +14,11 @@ const nextConfig = {
         source: '/servico/softhouse',
         destination: '/service/softhouse',
       },
+      {
+        source: '/servico/martketing-digital',
+        destination: '/service/martketing',
+      },
+
     ];
   },
   reactStrictMode: true,
