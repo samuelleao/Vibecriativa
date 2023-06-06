@@ -86,7 +86,7 @@ export function Navbar({ element }: NavbarTypes) {
                         </div>
                     </NavigationMenu.Root>
                 </div>
-                <div className='flex space-x-4'>
+                <div className='flex space-x-4 items-center'>
                     <LinkWhatsapp>
                         <Button white={true} className="notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
                             <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
@@ -96,7 +96,7 @@ export function Navbar({ element }: NavbarTypes) {
                     <Link href="/contato">
                         <Button className="tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700 mobile:hidden" white={true} outline={true} primary={isVisible}>Entrar em contato</Button>
                     </Link>
-                    <button onClick={changeVisibleMenuMobile} className={`px-4 py-2 w-max rounded relative desktop:hidden mobile:flex`}>
+                    <button onClick={changeVisibleMenuMobile} className={`px-4 py-2 w-max rounded relative desktop:hidden mobile:flex h-4`}>
                         <span className={`transition-transform ${menuMobileIsVisible ? 'rotate-[45deg] origin-left' : ''} w-6 top-0 left-0 absolute h-[2px]  rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
                         <span className={`transition-transform ${menuMobileIsVisible ? 'invisible' : 'visible'} absolute top-1/2 -translate-y-1/2 left-0 w-6 h-[2px] rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
                         <span className={`transition-transform ${menuMobileIsVisible ? '-rotate-[45deg] origin-[16%] w-6 ' : ''} w-4 bottom-0 left-0 absolute h-[2px] rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
