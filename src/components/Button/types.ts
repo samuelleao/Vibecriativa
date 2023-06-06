@@ -6,5 +6,6 @@ export interface ButtonTypes extends React.ButtonHTMLAttributes<HTMLButtonElemen
     white?: boolean,
     black?: boolean,
     outline?: boolean,
+    secondary?: boolean,
     ref?: HTMLButtonElement | undefined
 }
