@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export interface ButtonTypes extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     primary?: boolean,
     children?: React.ReactNode,

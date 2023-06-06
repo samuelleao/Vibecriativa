@@ -7,7 +7,7 @@ import { AccordionContent, AccordionItem, AccordionTrigger } from '@components/A
 import Image from 'next/image'
 import { Project } from '@components/Project';
 import Link from 'next/link';
-import { motion, useMotionValue } from "framer-motion"
+import { motion } from "framer-motion"
 import Head from 'next/head';
 import { Footer } from '@components/Footer';
 import { GetServicesDocument, useGetProjectsQuery, useGetServicesQuery } from 'generated/graphql';
@@ -40,7 +40,8 @@ const services = [
                 name: "TARARRA",
                 id: 4,
             }
-        ]
+        ],
+        page: "/servico/softhouse"
     },
     {
         name: "🎲  Marketing Digital",
@@ -54,7 +55,8 @@ const services = [
                 name: "Assessorias",
                 id: 2,
             }
-        ]
+        ],
+        page: "/servico/softhouse"
     },
     {
         name: "🎨  Criação",
@@ -72,8 +74,24 @@ const services = [
                 name: "Criação de artes",
                 id: 3,
             }
-        ]
+        ],
+        page: "/servico/softhouse"
     },
+    {
+        name: "☕️  Produtos",
+        description: "Neste nosso ambiente temos serviços voltados para converter suas vendas por meio do desenvolvimento",
+        internalServices: [
+            {
+                name: "Refácil",
+                id: 1,
+            },
+            {
+                name: "Handson",
+                id: 2,
+            }
+        ],
+        page: "/servico/softhouse"
+    }
 ]
 
 export default function Home() {
@@ -149,16 +167,14 @@ export default function Home() {
                         <div className="grid grid-cols-2 gap-12 py-12 tablet:grid-cols-1">
                             {services.map((service, index) => (
                                 <div className='space-y-6 px-8 py-9 bg-white rounded-lg' key={index}>
-                                    <h4 className='text-lg font-semibold text-slate-900'>👩🏾‍💻  Softhouse</h4>
+                                    <h4 className='text-lg font-semibold text-slate-900'>{service.name}</h4>
                                     <div className="flex gap-3">
-                                        <small className='min-w-max font-medium text-sm text-slate-900'>Website</small>
-                                        <small className='min-w-max font-medium text-sm text-slate-900'>Blog</small>
-                                        <small className='min-w-max font-medium text-sm text-slate-900'>Landing Page</small>
-                                        <small className='min-w-max font-medium text-sm text-slate-900'>Sistemas</small>
-                                        <small className='min-w-max font-medium text-sm text-slate-900'>...</small>
+                                        {service.internalServices.map((internalService) => (
+                                            <small className='min-w-max font-medium text-sm text-slate-900' key={internalService.id}>{internalService.name}</small>
+                                        ))}
                                     </div>
-                                    <p className='font-normal text-sm leading-relaxed text-slate-500'>Ambiente feito para você iniciar suas soluções do total zero, onde podemos idelizar e criar novas soluções no universo digital</p>
-                                    <Link href="" className='font-semibold text-sm text-primary-500 flex items-center gap-4 hover:gap-5 transition-all'>Conhecer <FaArrowRight /></Link>
+                                    <p className='font-normal text-sm leading-relaxed text-slate-500'>{service.description}</p>
+                                    <Link href={service.page} className='font-semibold text-sm text-primary-500 flex items-center gap-4 hover:gap-5 transition-all'>Conhecer <FaArrowRight /></Link>
                                 </div>
                             ))}
                         </div>
