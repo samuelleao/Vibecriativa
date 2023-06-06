@@ -5,7 +5,7 @@ export const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
     function AccordionItem({ children, className, ...props }, forwardedRef) {
         return (
             <Item
-                className=""
+                className={className && className}
                 {...props}
                 ref={forwardedRef}
             >
