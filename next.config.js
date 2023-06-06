@@ -10,6 +10,10 @@ const nextConfig = {
         source: '/contato',
         destination: '/contact',
       },
+      {
+        source: '/servico/softhouse',
+        destination: '/service/softhouse',
+      },
     ];
   },
   reactStrictMode: true,
