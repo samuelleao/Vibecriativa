@@ -22,6 +22,10 @@ const nextConfig = {
         source: '/servico/criacao',
         destination: '/service/creation',
       },
+      {
+        source: '/servico/produtos',
+        destination: '/service/products',
+      },
     ];
   },
   reactStrictMode: true,

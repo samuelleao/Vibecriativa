@@ -90,7 +90,7 @@ const services = [
                 id: 2,
             }
         ],
-        page: "/servico/softhouse"
+        page: "/servico/produtos"
     }
 ]
 
