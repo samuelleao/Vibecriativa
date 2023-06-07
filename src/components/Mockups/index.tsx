@@ -1,8 +1,8 @@
 export function Mockups() {
     return (
         <div className='w-[60%] tablet:w-full tablet:px-8 h-full translate-y-[10%] flex items-end justify-end gap-32 flex-col'>
-            <div className="w-[500px] tablet:w-full relative after:absolute after:rounded-full after:w-[1100px] after:h-[1100px] after:bg-white/5 after:left-1/2 after:transform after:-translate-x-1/2 after:top-0 before:absolute before:top-[8%] before:rounded-full before:w-[1000px] before:h-[1000px] before:bg-white/5 before:left-1/2 before:transform before:-translate-x-1/2">
-                <div className="flex gap-32 flex-col w-full relative before:absolute before:w-[2px] before:bg-white/10 before:h-full before:top-0 before:left-1/2 before:transform before:-translate-x-1/2">
+            <div className="w-[31.25rem] tablet:w-full relative after:absolute after:rounded-full after:w-[68.75rem] after:h-[68.75rem] after:bg-white/5 after:left-1/2 after:transform after:-translate-x-1/2 after:top-0 before:absolute before:top-[8%] before:rounded-full before:w-[62.5rem] before:h-[62.5rem] before:bg-white/5 before:left-1/2 before:transform before:-translate-x-1/2">
+                <div className="flex gap-32 flex-col w-full relative before:absolute before:w-[0.125rem] before:bg-white/10 before:h-full before:top-0 before:left-1/2 before:transform before:-translate-x-1/2">
                     <div className="flex justify-between items-start relative h-52 border-2 border-t-0 rounded-lg border-white/10">
                         <img className="h-16 w-16 rounded-full -translate-x-8" src="/home/header-1.png" alt="" />
                         <img className="h-16 w-16 rounded-full" src="/home/header-2.png" alt="" />

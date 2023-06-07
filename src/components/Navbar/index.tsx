@@ -7,7 +7,6 @@ import { LinkWhatsapp } from "@components/LinkWhatsapp";
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { FaAngleDown } from "react-icons/fa";
 import { useGetServicesQuery } from "generated/graphql";
-import { RxDotsVertical } from "react-icons/rx"
 
 export function Navbar({ element }: NavbarTypes) {
 
@@ -53,7 +52,7 @@ export function Navbar({ element }: NavbarTypes) {
                                     <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isVisible && "text-gray-900"}`}><Link href="/sobre">Sobre a vibe</Link></li>
                                 </NavigationMenu.Item>
                                 <NavigationMenu.Item className="relative">
-                                    <NavigationMenu.Trigger className={`relative group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 leading-none outline-none focus:shadow-[0_0_0_2px] text-sm text-gray-50 font-normal tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isVisible && "text-gray-900"} tablet:p-0`}>
+                                    <NavigationMenu.Trigger className={`relative group flex select-none items-center justify-between gap-[0.125rem] rounded-[4px] px-3 py-2 leading-none outline-none focus:shadow-[0_0_0_0.125rem] text-sm text-gray-50 font-normal tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isVisible && "text-gray-900"} tablet:p-0`}>
                                         Serviços
                                         <FaAngleDown
                                             className="text-violet10 relative top-[0.063rem] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
@@ -82,7 +81,7 @@ export function Navbar({ element }: NavbarTypes) {
                             </ul>
                         </NavigationMenu.List>
                         <div className="perspective-[125rem] absolute top-full left-0 flex w-full justify-center z-30">
-                            <NavigationMenu.Viewport className="shadow-lg data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[10px] h-[var(--radix-navigation-menu-viewport-height)] w-[42.5rem] origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+                            <NavigationMenu.Viewport className="shadow-lg data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[0.625rem] h-[var(--radix-navigation-menu-viewport-height)] w-[42.5rem] origin-[top_center] overflow-hidden rounded-md bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
                         </div>
                     </NavigationMenu.Root>
                 </div>
@@ -97,9 +96,9 @@ export function Navbar({ element }: NavbarTypes) {
                         <Button className="tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700 mobile:hidden" white={true} outline={true} primary={isVisible}>Entrar em contato</Button>
                     </Link>
                     <button onClick={changeVisibleMenuMobile} className={`px-4 py-2 w-max rounded relative desktop:hidden mobile:flex h-4`}>
-                        <span className={`transition-transform ${menuMobileIsVisible ? 'rotate-[45deg] origin-left' : ''} w-6 top-0 left-0 absolute h-[2px]  rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
-                        <span className={`transition-transform ${menuMobileIsVisible ? 'invisible' : 'visible'} absolute top-1/2 -translate-y-1/2 left-0 w-6 h-[2px] rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
-                        <span className={`transition-transform ${menuMobileIsVisible ? '-rotate-[45deg] origin-[16%] w-6 ' : ''} w-4 bottom-0 left-0 absolute h-[2px] rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
+                        <span className={`transition-transform ${menuMobileIsVisible ? 'rotate-[45deg] origin-left' : ''} w-6 top-0 left-0 absolute h-[0.125rem]  rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
+                        <span className={`transition-transform ${menuMobileIsVisible ? 'invisible' : 'visible'} absolute top-1/2 -translate-y-1/2 left-0 w-6 h-[0.125rem] rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
+                        <span className={`transition-transform ${menuMobileIsVisible ? '-rotate-[45deg] origin-[16%] w-6 ' : ''} w-4 bottom-0 left-0 absolute h-[0.125rem] rounded-full ${isVisible ? `bg-slate-950` : 'bg-white'}`}></span>
                     </button>
                 </div>
             </div>

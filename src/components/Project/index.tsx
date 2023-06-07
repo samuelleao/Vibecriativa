@@ -15,7 +15,7 @@ interface ProjectProps {
 
 export function Project({ title, description, img = "", link, category }: ProjectProps) {
     return (
-        <motion.div className='min-w-[372px] border border-slate-200 rounded-lg overflow-hidden pb-9'>
+        <motion.div className='min-w-[23.25rem] border border-slate-200 rounded-lg overflow-hidden pb-9'>
             <div className="h-52 relative overflow-hidden bg-slate-100 pointer-events-none">
                 <Image src={img} alt={`Imagem do Projeto ${title}`} width={300} height={208} className='object-cover absolute w-full h-full top-10 left-0' />
             </div>
