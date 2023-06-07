@@ -37,7 +37,7 @@ const services = [
                 id: 3,
             },
             {
-                name: "TARARRA",
+                name: "...",
                 id: 4,
             }
         ],
@@ -108,8 +108,6 @@ export default function Home() {
 
     const [widthSlider, setWidthSlider] = useState(0)
 
-    console.log(widthSlider)
-
     useEffect(() => {
         if (data) {
             setCurrentElement(processRef.current);
@@ -128,8 +126,6 @@ export default function Home() {
         }
 
     }, [projects]);
-
-    const [scrollX, setScrollX] = useState(0);
 
     return (
         <Fragment>
@@ -169,8 +165,8 @@ export default function Home() {
                                 <div className='space-y-6 px-8 py-9 bg-white rounded-lg' key={index}>
                                     <h4 className='text-lg font-semibold text-slate-900'>{service.name}</h4>
                                     <div className="flex gap-3">
-                                        {service.internalServices.map((internalService) => (
-                                            <small className='min-w-max font-medium text-sm text-slate-900' key={internalService.id}>{internalService.name}</small>
+                                        {service.internalServices.map((internalService, index) => (
+                                            <small className='min-w-max font-medium text-sm text-slate-900' key={index}>{internalService.name}</small>
                                         ))}
                                     </div>
                                     <p className='font-normal text-sm leading-relaxed text-slate-500'>{service.description}</p>

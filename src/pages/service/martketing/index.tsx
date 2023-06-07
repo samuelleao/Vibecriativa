@@ -106,7 +106,7 @@ export default function Marketing() {
                         </div>
                     </div>
                 </div>
-                <Image className="max-w-full absolute w-full top-0 left-0 h-full object-cover -z-[1]" src="/marketing-header.png" width={1200} height={600} alt="" />
+                <Image quality={100} priority className="max-w-full absolute w-full top-0 left-0 h-full object-cover -z-[1]" src="/marketing-header.png" width={1200} height={600} alt="" />
             </header>
             <section className="py-32 tablet:py-16">
                 <div className="mx-auto max-w-full tablet:mt-0 tablet:px-4 w-[65rem] flex flex-col tablet:flex-col">
@@ -234,8 +234,8 @@ export default function Marketing() {
                             { alt: "Pollux", path: "/marketing-case-2.png" },
                             { alt: "Dijosete", path: "/marketing-case-3.png" },
                             { alt: "Vesthosp", path: "/marketing-case-4.png" }
-                        ].map((current) => (
-                            <Image src={current.path} width={180} height={85} alt={current.alt} title={current.alt} />
+                        ].map((current, index) => (
+                            <Image key={index} src={current.path} width={180} height={85} alt={current.alt} title={current.alt} />
                         ))}
                     </div>
                 </div>
