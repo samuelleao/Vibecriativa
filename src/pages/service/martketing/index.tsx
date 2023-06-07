@@ -95,12 +95,12 @@ export default function Marketing() {
                         <div className="shadow-xl rounded-lg overflow-hidden relative flex-1 space-y-4 px-8 pt-9 pb-28 bg-gradient-to-r from-[#2938C0] to-[#5480F4]">
                             <h3 className="text-xl font-semibold text-slate-50">Assessorias</h3>
                             <p className="text-sm font-normal text-slate-50 leading-loose">Neste nosso ambiente vamos poder acompanhar de perto seus números, alcance e resultados do seu produto digital</p>
-                            <a href="" className="flex justify-between px-8 bg-white items-center text-sm absolute w-full h-14 left-0 bottom-0 font-medium">Ver soluções e planos <FaArrowDown /></a>
+                            <a href="#assessorias" className="flex justify-between px-8 bg-white items-center text-sm absolute w-full h-14 left-0 bottom-0 font-medium">Ver soluções e planos <FaArrowDown /></a>
                         </div>
                         <div className="rounded-lg shadow-xl w-[398px] tablet:w-full space-y-4 max-w-full px-8 py-9 bg-primary-500">
                             <h3 className="text-xl font-semibold text-slate-50">Consultorias</h3>
                             <p className="text-sm font-normal text-slate-50 leading-loose">Avaliar seus resultados atuais, compreender cenário de mercado, sinalizar melhorias para gerar valor para você e seu negócio</p>
-                            <a href="" className="block">
+                            <a href="#consultorias" className="block">
                                 <Button white className="w-full justify-between h-12">Ver soluções e planos <FaArrowDown /></Button>
                             </a>
                         </div>
@@ -108,7 +108,7 @@ export default function Marketing() {
                 </div>
                 <Image quality={100} priority className="max-w-full absolute w-full top-0 left-0 h-full object-cover -z-[1]" src="/marketing-header.png" width={1200} height={600} alt="" />
             </header>
-            <section className="py-32 tablet:py-16">
+            <section id="assessorias" className="py-32 tablet:py-16">
                 <div className="mx-auto max-w-full tablet:mt-0 tablet:px-4 w-[65rem] flex flex-col tablet:flex-col">
                     <div className="flex tablet:items-start items-center tablet:flex-col">
                         <div className="flex-1 pr-16 tablet:pr-0 space-y-4">
@@ -200,7 +200,7 @@ export default function Marketing() {
                     </div>
                 </div>
             </section>
-            <section className="py-44 tablet:py-20 relative before:absolute before:h-full before:w-full before:bg-slate-950/70 before:top-0 before:left-0 before:z-[1]">
+            <section id="consultorias" className="py-44 tablet:py-20 relative before:absolute before:h-full before:w-full before:bg-slate-950/70 before:top-0 before:left-0 before:z-[1]">
                 <div className="mx-auto max-w-full tablet:mt-0 tablet:px-4 w-[65rem] flex flex-col tablet:flex-col">
                     <div className="w-6/12 tablet:w-full flex flex-col items-start gap-8 justify-center relative z-[1] text-left">
                         <h1 className="text-4xl tablet:w-full font-semibold text-slate-50 leading-relaxed mt-4 mobile:text-xl">Consultorias</h1>

@@ -75,7 +75,7 @@ const services = [
                 id: 3,
             }
         ],
-        page: "/servico/softhouse"
+        page: "/servico/criacao"
     },
     {
         name: "☕️  Produtos",
@@ -153,7 +153,7 @@ export default function Home() {
                 </div>
             </header>
             <main className='mt-4'>
-                <div ref={processRef} className='sticky top-32'></div>
+                <div ref={processRef} className='sticky top-32 tablet:-translate-y-[250%]'></div>
                 <section className='py-32 bg-slate-50'>
                     <div className="mx-auto max-w-full tablet:px-4 w-[55.813rem] flex flex-col items-start justify-start">
                         <div className='mb-16 px-10 tablet:px-0 tablet:text-left tablet:items-start text-center space-y-4 flex flex-col items-center'>

@@ -45,7 +45,7 @@ export function Navbar({ element }: NavbarTypes) {
                     </Link>
                     <NavigationMenu.Root>
                         <NavigationMenu.List asChild >
-                            <ul className={`flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isVisible ? 'tablet:top-[67px]' : 'tablet:top-[100px]'} tablet:flex tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:top-[67px] tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:z-30 tablet:gap-8 tablet:p-8 relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-full tablet:before:w-full ` : 'tablet:hidden'}`}>
+                            <ul className={`flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isVisible ? 'tablet:top-[64px]' : 'tablet:top-[100px]'} tablet:flex tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:top-[67px] tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:z-30 tablet:gap-8 tablet:p-8 relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-full tablet:before:w-full ` : 'tablet:hidden'}`}>
                                 <NavigationMenu.Item asChild>
                                     <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isVisible && "text-gray-900"}`}><Link href="/home">Início</Link></li>
                                 </NavigationMenu.Item>

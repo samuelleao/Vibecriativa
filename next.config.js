@@ -18,7 +18,10 @@ const nextConfig = {
         source: '/servico/martketing-digital',
         destination: '/service/martketing',
       },
-
+      {
+        source: '/servico/criacao',
+        destination: '/service/creation',
+      },
     ];
   },
   reactStrictMode: true,
