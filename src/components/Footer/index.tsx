@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useGetServicesQuery } from "generated/graphql";
 import { LinkWhatsapp } from "@components/LinkWhatsapp";
+import { services } from "data/services";
 
 export function Footer() {
 
@@ -28,12 +29,12 @@ export function Footer() {
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/sobre">Sobre a vibe</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/home#portfolio">Portfólio</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><LinkWhatsapp>Falar com a vibe</LinkWhatsapp></li>
-                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'>Iniciar projeto</li>
+                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/contato">Entra em Contato</Link></li>
                         </ul>
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-slate-50'>Serviços</li>
-                            {data?.services?.map((item) => (
-                                <li className='text-sm font-medium text-slate-400 hover:text-slate-200' key={item.title}><Link href={`/servico/${item.url}`}>{item.title}</Link></li>
+                            {services?.map((item) => (
+                                <li className='text-sm font-medium text-slate-400 hover:text-slate-200' key={item.name}><Link href={item.url} data-before="" className="">{item.name}</Link></li>
                             ))}
                         </ul>
                         <ul className='space-y-10'>

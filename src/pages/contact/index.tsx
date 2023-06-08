@@ -6,7 +6,7 @@ import Head from "next/head";
 import Image from "next/image"
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
-import {RiSendPlaneFill } from "react-icons/ri"
+import { RiSendPlaneFill } from "react-icons/ri"
 
 export default function Contact() {
     return (
@@ -15,15 +15,15 @@ export default function Contact() {
                 <title>Vibecriativa | Contato</title>
             </Head>
             <Navbar />
-            <header className="py-44 tablet:py-32 relative before:absolute before:z-0 before:w-8/12 tablet:before:w-full before:h-full before:top-0 before:left-0 before:bg-gradient-to-r before:from-[#2938C0] before:to-[#5480F4]">
+            <header className="py-44 tablet:pt-32 tablet:pb-16 relative before:absolute before:z-0 before:w-8/12 tablet:before:w-full before:h-full before:top-0 before:left-0 before:bg-gradient-to-r before:from-[#2938C0] before:to-[#5480F4]">
                 <div className="container flex relative z-10 items-center tablet:flex-col tablet:gap-14">
                     <div className="flex-1 pr-16 tablet:pr-0">
                         <h1 className="text-4xl font-semibold leading-relaxed text-slate-50 tablet:text-xl">Início de uma nova <span className="text-secondary-500">experência</span></h1>
-                        <p className="pr-40 tablet:pr-0 text-sm text-gray-50 leading-loose mt-8 tablet:text-sm">No campos abaixo vamos colher alguns dados importantes para poder iniciar o seu projeto</p>
+                        <p className="pr-40 tablet:pr-0 text-sm text-gray-50 leading-loose tablet:leading-loose mt-8 tablet:text-sm">No campos abaixo vamos colher alguns dados importantes para poder iniciar o seu projeto</p>
                     </div>
                     <div className="flex-1">
-                        <form action="" className="px-8 py-10 border border-slate-200 rounded-lg space-y-8 bg-white">
-                            <h2 className="text-lg font-medium text-slate-900">Como podemos te ajudar?</h2>
+                        <form action="" className="px-8 py-10 border border-slate-200 rounded-lg space-y-8 bg-white tablet:px-4 tablet:py-4">
+                            <h2 className="text-lg font-medium text-slate-900 tablet:text-base">Como podemos te ajudar?</h2>
                             <div className="flex gap-4 w-8/12 items-center tablet:w-full">
                                 <div className="relative w-12 h-12 min-h-[3rem] min-w-[3rem] rounded-full border-2 border-slate-200 flex items-center justify-center p-1">
                                     <Image className="" src="/logo.png" width={40} height={40} alt="Vibecriativa Logotipo" />
@@ -34,12 +34,16 @@ export default function Contact() {
                             </div>
                             <Input label="Mensagem" placeholder="Digitar mensagem..." asElement="textarea" helperText="Deixe aqui sua dúvida, sugestão ou informações sobre projeto" />
                             <Input label="Assunto" placeholder="Digitar assunto" />
+                            <div className="space-y-4 py-2">
+                                <strong className="text-base font-medium block">Seu melhor contato &#128513;</strong>
+                                <small className="text-sm block leading-loose text-slate-500">Vamos precisar de um desses contatos abaixo, você insere o que for melhor pra você, ou os dois se quiser.</small>
+                            </div>
                             <div className="grid grid-cols-2 gap-4 tablet:grid-cols-1 tablet:gap-8">
                                 <Input label="Contato de Whatsapp" helperText="(00) 0 0000-0000" />
-                                <Input label="Email" />
+                                <Input label="Email" helperText="exemplo@email.com" />
                             </div>
                             <Input label="Seu Nome" />
-                            <Button primary={true}> <RiSendPlaneFill/> Enviar mensagem</Button>
+                            <Button className="tablet:w-full" primary={true}> <RiSendPlaneFill /> Enviar mensagem</Button>
                         </form>
                     </div>
                 </div>

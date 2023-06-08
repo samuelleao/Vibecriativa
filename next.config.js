@@ -15,7 +15,7 @@ const nextConfig = {
         destination: '/service/softhouse',
       },
       {
-        source: '/servico/martketing-digital',
+        source: '/servico/marketing-digital',
         destination: '/service/martketing',
       },
       {

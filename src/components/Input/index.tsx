@@ -42,7 +42,7 @@ export const Input = React.forwardRef(
                         {...rest}
                     >
                     </textarea>
-                    {helperText && (<small className="text-slate-600 text-xs">{helperText}</small>)}
+                    {helperText && (<small className="text-slate-600 text-xs leading-relaxed">{helperText}</small>)}
                     {error && (<small className="text-red-600 text-xs">{error}</small>)}
                 </fieldset>
             );

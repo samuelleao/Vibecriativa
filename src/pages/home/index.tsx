@@ -14,85 +14,7 @@ import { GetServicesDocument, useGetProjectsQuery, useGetServicesQuery } from 'g
 import { GetStaticProps } from 'next/types';
 import { client, ssrCache } from '@lib/urql';
 import { FaArrowRight } from 'react-icons/fa';
-
-const services = [
-    {
-        name: "👩🏾‍💻 Softhouse",
-        description: "Ambiente feito para você iniciar suas soluções do total zero, onde podemos idelizar e criar novas soluções no universo digital",
-        internalServices: [
-            {
-                name: "Website",
-                id: 1,
-            },
-            {
-                name: "Blog",
-                id: 2,
-            },
-            {
-                name: "Landing Page",
-                id: 3,
-            },
-            {
-                name: "Sistemas",
-                id: 3,
-            },
-            {
-                name: "...",
-                id: 4,
-            }
-        ],
-        page: "/servico/softhouse"
-    },
-    {
-        name: "🎲  Marketing Digital",
-        description: "Ambiente feito para você iniciar suas soluções do total zero, onde podemos idelizar e criar novas soluções no universo digital",
-        internalServices: [
-            {
-                name: "Consultorias",
-                id: 1,
-            },
-            {
-                name: "Assessorias",
-                id: 2,
-            }
-        ],
-        page: "/servico/martketing-digital"
-    },
-    {
-        name: "🎨  Criação",
-        description: "Neste nosso ambiente temos serviços voltados para converter suas vendas por meio do desenvolvimento",
-        internalServices: [
-            {
-                name: "MIV",
-                id: 1,
-            },
-            {
-                name: "UX",
-                id: 2,
-            },
-            {
-                name: "Criação de artes",
-                id: 3,
-            }
-        ],
-        page: "/servico/criacao"
-    },
-    {
-        name: "☕️  Produtos",
-        description: "Neste nosso ambiente temos serviços voltados para converter suas vendas por meio do desenvolvimento",
-        internalServices: [
-            {
-                name: "Refácil",
-                id: 1,
-            },
-            {
-                name: "Handson",
-                id: 2,
-            }
-        ],
-        page: "/servico/produtos"
-    }
-]
+import { services } from 'data/services';
 
 export default function Home() {
 
@@ -196,14 +118,14 @@ export default function Home() {
                         <div className="grid grid-cols-2 gap-12 py-12 tablet:grid-cols-1">
                             {services.map((service, index) => (
                                 <div className='space-y-6 px-8 py-9 bg-white rounded-lg' key={index}>
-                                    <h4 className='text-lg font-semibold text-slate-900'>{service.name}</h4>
+                                    <h4 className='text-lg font-semibold text-slate-900'><span className='mr-2'>{service.emoji}</span> {service.name}</h4>
                                     <div className="flex gap-3">
-                                        {service.internalServices.map((internalService, index) => (
+                                        {service.subservices.map((internalService, index) => (
                                             <small className='min-w-max font-medium text-sm text-slate-900' key={index}>{internalService.name}</small>
                                         ))}
                                     </div>
                                     <p className='font-normal text-sm leading-relaxed text-slate-500'>{service.description}</p>
-                                    <Link href={service.page} className='font-semibold text-sm text-primary-500 flex items-center gap-4 hover:gap-5 transition-all'>Conhecer <FaArrowRight /></Link>
+                                    <Link href={service.url} className='font-semibold text-sm text-primary-500 flex items-center gap-4 hover:gap-5 transition-all'>Conhecer <FaArrowRight /></Link>
                                 </div>
                             ))}
                         </div>
