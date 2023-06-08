@@ -9,7 +9,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { useGetServicesQuery } from "generated/graphql";
 import { services } from "data/services";
 
-export function Navbar({ navbarRef, isNavbarVisible = true }: NavbarTypes) {
+export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }: NavbarTypes) {
 
     const [{ data }] = useGetServicesQuery();
 
@@ -29,15 +29,15 @@ export function Navbar({ navbarRef, isNavbarVisible = true }: NavbarTypes) {
                         </Link>
                         <NavigationMenu.Root className="flex-1">
                             <NavigationMenu.List asChild >
-                                <ul className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:top-[65px]' : 'tablet:top-[100px]'} tablet:flex tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:top-[67px] tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:z-30 tablet:gap-2 tablet:pt-2 tablet:pb-4  relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-full tablet:before:w-full ` : 'tablet:hidden'}`}>
+                                <ul className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:top-[65px]' : 'tablet:top-[120px]'} tablet:flex tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:top-[67px] tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:z-30 tablet:gap-2 tablet:pt-2 tablet:pb-4  relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-screen tablet:before:w-full ` : 'tablet:hidden'}`}>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isNavbarVisible && "text-gray-900"}`}><Link href="/">Início</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/">Início</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isNavbarVisible && "text-gray-900"}`}><Link href="/sobre">Sobre a vibe</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/sobre">Sobre a vibe</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item className="relative">
-                                        <NavigationMenu.Trigger className={`relative group flex select-none items-center justify-between gap-[0.125rem] rounded-[4px] px-3 py-2 leading-none outline-none focus:shadow-[0_0_0_0.125rem] text-sm text-gray-50 font-normal tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isNavbarVisible && "text-gray-900"} tablet:p-0`}>
+                                        <NavigationMenu.Trigger className={`relative group flex select-none items-center justify-between gap-[0.125rem] rounded-[4px] px-3 py-2 leading-none outline-none focus:shadow-[0_0_0_0.125rem] text-sm text-gray-50 font-normal tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"} tablet:p-0`}>
                                             Serviços
                                             <FaAngleDown
                                                 className="text-violet10 relative top-[0.063rem] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
@@ -58,10 +58,10 @@ export function Navbar({ navbarRef, isNavbarVisible = true }: NavbarTypes) {
                                         </NavigationMenu.Content>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isNavbarVisible && "text-gray-900"}`}><Link href="/home#portfolio">Portfólio</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/home#portfolio">Portfólio</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full ${isNavbarVisible && "text-gray-900"}`}><Link href="/servico/produtos">Produtos</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/servico/produtos">Produtos</Link></li>
                                     </NavigationMenu.Item>
                                     <ul className='flex space-x-4 items-center flex-1 justify-end'>
                                         <li>
@@ -95,7 +95,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true }: NavbarTypes) {
                 </div>
             </div>
             <LinkWhatsapp>
-                <Button white={true} className="desktop:hidden notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
+                <Button white={true} className="hidden tablet:flex notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
                     <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
                     Falar com a Vibecriativa
                 </Button>

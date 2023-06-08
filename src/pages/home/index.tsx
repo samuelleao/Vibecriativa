@@ -87,7 +87,7 @@ export default function Home() {
             <Head>
                 <title>Vibecriativa</title>
             </Head>
-            <Navbar navbarRef={navbarRef} isNavbarVisible={isNavbarVisible} />
+            <Navbar navbarRef={navbarRef} isNavbarVisible={isNavbarVisible} setIsNavbarVisible={setIsNavbarVisible} />
             <header className='bg-gradient-to-r from-[#2938C0] to-[#5480F4] h-screen tablet:h-auto overflow-hidden'>
                 <div className="container flex items-center tablet:flex-col h-full tablet:pt-10">
                     <div className='h-full w-[40%] tablet:w-full flex flex-col justify-center tablet:justify-start tablet:pt-60 mobile:pt-32 gap-8'>
@@ -108,14 +108,13 @@ export default function Home() {
                 </div>
             </header>
             <main className='mt-4'>
-
-                <section className='py-32 bg-slate-50'>
+                <section className='py-32 bg-slate-50 tablet:py-16'>
                     <div className="mx-auto max-w-full tablet:px-4 w-[55.813rem] flex flex-col items-start justify-start">
                         <div className='mb-16 px-10 tablet:px-0 tablet:text-left tablet:items-start text-center space-y-4 flex flex-col items-center'>
                             <h4 className='text-4xl tablet:text-2xl font-semibold text-slate-900 leading-normal'><span className='text-primary-500'>Serviços</span> e soluções que desenvolvemos para você</h4>
-                            <p className='px-32 tablet:px-0 text-base tablet:text-sm font-normal text-slate-600'>Você pode nos consultar caso esteja em dúvida em qual seria a melhor solução para sua ideia</p>
+                            <p className='px-32 tablet:px-0 text-base tablet:text-sm font-normal text-slate-600 tablet:leading-loose'>Você pode nos consultar caso esteja em dúvida em qual seria a melhor solução para sua ideia</p>
                         </div>
-                        <div className="grid grid-cols-2 gap-12 py-12 tablet:grid-cols-1">
+                        <div className="grid grid-cols-2 gap-12 py-12 tablet:py-0 tablet:grid-cols-1">
                             {services.map((service, index) => (
                                 <div className='space-y-6 px-8 py-9 bg-white rounded-lg' key={index}>
                                     <h4 className='text-lg font-semibold text-slate-900'><span className='mr-2'>{service.emoji}</span> {service.name}</h4>

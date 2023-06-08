@@ -1,7 +1,8 @@
-import { MutableRefObject, ReactNode } from "react";
+import { Dispatch, MutableRefObject, ReactNode, SetStateAction } from "react";
 
 export interface NavbarTypes {
     scrollEffect?: boolean,
     navbarRef?: React.RefObject<HTMLDivElement>,
-    isNavbarVisible?: boolean
+    isNavbarVisible?: boolean,
+    setIsNavbarVisible?: any
 }
