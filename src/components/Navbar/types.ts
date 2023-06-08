@@ -2,5 +2,6 @@ import { MutableRefObject, ReactNode } from "react";
 
 export interface NavbarTypes {
     scrollEffect?: boolean,
-    element?: HTMLElement | HTMLDivElement | null
+    navbarRef?: React.RefObject<HTMLDivElement>,
+    isNavbarVisible?: boolean
 }

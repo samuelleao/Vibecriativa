@@ -12,12 +12,12 @@ export default function About() {
                 <meta name="description" content=""/>
             </Head>
             <Navbar />
-            <header className="pt-60 pb-32 relative">
+            <header className="pt-44 pb-32 relative">
                 <Image quality={100} priority className="absolute top-0 left-0 w-full h-full object-cover z-0" src="/about.webp" width={1360} height={500} alt="Imagem de pessoas programando em computadores" />
                 <div className="container flex justify-center relative">
                     <div className="w-[41.5rem] max-w-ful flex flex-col items-start justify-start">
-                        <h1 className="text-4xl font-semibold mb-14 text-gray-50 mobile:text-xl">Sobre a vibecriativa</h1>
-                        <p className="text-xl font-medium text-gray-50">Um caminho sobre nossa história</p>
+                        <h1 className="text-4xl font-semibold mb-8 text-gray-50 mobile:text-xl">Sobre a vibecriativa</h1>
+                        <p className="text-lg font-medium text-gray-50">Um caminho sobre nossa história</p>
                     </div>
                 </div>
             </header>
@@ -39,7 +39,7 @@ export default function About() {
                             </div>
                         </div>
                         <div className="mt-36">
-                            <h3 className="text-2xl font-medium leading-relaxed tablet:text-xl">Nossa agência é a personificação da criatividade e do profissionalismo, entregando resultados excepcionais aos nossos clientes.</h3>
+                            <h3 className="text-2xl font-medium leading-relaxed tablet:text-xl tablet:leading-relaxed">Nossa agência é a personificação da criatividade e do profissionalismo, entregando resultados excepcionais aos nossos clientes.</h3>
                             <div className="flex gap-6 mt-6 items-center">
                                 <Image className="w-14 h-14 rounded-full" src="/idamylton.png" width={200} height={200} alt="Sócio da Vibecriativa em um evento utilizando uma camisa social" />
                                 <div>
