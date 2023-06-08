@@ -13,4 +13,5 @@ export interface InputTypes extends React.InputHTMLAttributes<HTMLInputElement>{
     icon?: any,
     subLabel?: string,
     defaultChecked?: boolean;
+    asElement?: "textarea"
 }
