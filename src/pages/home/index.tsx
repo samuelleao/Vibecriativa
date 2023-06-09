@@ -113,20 +113,20 @@ export default function Home() {
                     <div className="mx-auto max-w-full tablet:px-4 w-[55.813rem] flex flex-col items-start justify-start">
                         <div className='flex flex-col mb-16 tablet:px-0 tablet:text-left items-start text-left space-y-4'>
                             <strong className='text-sm font-medium mb-4 text-slate-500'>SERVIÇOS</strong>
-                            <h4 className='text-4xl tablet:text-2xl font-semibold text-slate-900 leading-normal'>Para cada — detalhe — uma conversão.</h4>
+                            <h2 className='text-4xl tablet:text-2xl font-semibold text-slate-900 leading-normal'>Para cada — detalhe — uma conversão.</h2>
                             <p className='tablet:px-0 text-base tablet:text-sm font-normal text-slate-600 tablet:leading-loose'>Temos ambientes <strong className='font-semibold'>especializados</strong> para cada um de seus objetivos</p>
                         </div>
                         <div className="grid grid-cols-2 gap-12 py-12 tablet:py-0 tablet:grid-cols-1">
                             {services.map((service, index) => (
                                 <div className='space-y-6 px-8 py-9 bg-white rounded-lg' key={index}>
-                                    <h4 className='text-lg font-semibold text-slate-900'><span className='mr-2'>{service.emoji}</span> {service.name}</h4>
+                                    <strong className='text-lg font-semibold text-slate-900'><span className='mr-2'>{service.emoji}</span> {service.name}</strong>
                                     <div className="flex gap-3 flex-wrap">
                                         {service.subservices.map((internalService, index) => (
                                             <small className='min-w-max font-medium text-sm text-slate-900' key={index}>{internalService.name}</small>
                                         ))}
                                     </div>
                                     <p className='font-normal text-sm leading-relaxed text-slate-500'>{service.description}</p>
-                                    <Link href={service.url} className='font-semibold text-sm text-primary-500 flex items-center gap-4 hover:gap-5 transition-all'>Conhecer <FaArrowRight /></Link>
+                                    <Link href={service.url} className='font-semibold text-sm text-primary-700 flex items-center gap-4 hover:gap-5 transition-all'>Conhecer <FaArrowRight /></Link>
                                 </div>
                             ))}
                         </div>
@@ -137,7 +137,7 @@ export default function Home() {
                         <div className="flex justify-between items-center mb-20 tablet:mb-0 tablet:flex-col tablet:items-start tablet:gap-12">
                             <div className='w-5/12 tablet:w-full flex flex-col'>
                                 <strong className='text-sm font-medium mb-4 text-slate-500'>PROJETOS</strong>
-                                <h5 className='text-4xl font-bold mobile:text-2xl mobile:leading-relaxed leading-relaxed text-slate-900'>Uma nova experiência no universo digital.</h5>
+                                <h3 className='text-4xl font-bold mobile:text-2xl mobile:leading-relaxed leading-relaxed text-slate-900'>Uma nova experiência no universo digital.</h3>
                                 <p className='font-normal text-base mobile:text-sm mobile:leading-relaxed leading-relaxed text-slate-500 mt-6'>Empresas como a sua estão redesenhando a forma como projetam</p>
                             </div>
                         </div>
