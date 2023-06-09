@@ -92,14 +92,14 @@ export default function Softhouse() {
                 <div className="container flex notbook2:flex-col-reverse items-center notbook2:items-start">
                     <div className="grid grid-cols-2 flex-1 gap-6 pr-12 notbook2:grid-cols-2 tablet:grid-cols-1 notbook2:pr-0">
                         <div className="px-6 py-9 space-y-5 bg-slate-50 rounded-lg">
-                            <h5 className="font-semibold text-base">Soluções para converção</h5>
+                            <h5 className="font-semibold text-base">Soluções para conversão</h5>
                             <p className="text-sm leading-relaxed font-normal text-slate-500">Neste nosso ambiente temos serviços voltados para converter suas vendas por meio do desenvolvimento</p>
                             <a className="block text-sm font-medium text-primary-500" href="#solucoes">Ver soluções</a>
                         </div>
                         <div className="px-6 py-9 space-y-5 bg-slate-50 rounded-lg">
                             <h5 className="font-semibold text-base">Manutenção e Hospedagem</h5>
                             <p className="text-sm leading-relaxed font-normal text-slate-500">Neste nosso ambiente temos serviços voltados para converter suas vendas por meio do desenvolvimento</p>
-                            <a className="block text-sm font-medium text-primary-500" href="#planos">Ver planos</a>
+                            <a className="block text-sm font-medium text-primary-500" href="#manutencao-e-hospedagem">Ver planos</a>
                         </div>
                     </div>
                     <div className="w-[600px] notbook2:w-full notbook2:mb-12">
@@ -107,7 +107,7 @@ export default function Softhouse() {
                     </div>
                 </div>
             </section>
-            <section className="pb-32" id="solucoes">
+            <section className="pb-32 pt-20" id="solucoes">
                 <div className="container flex gap-10 items-start tablet:flex-col">
                     <div className="w-3/12 tablet:w-full sticky top-32 tablet:static">
                         <h5 className="font-semibold text-xl notbook2:text-base leading-relaxed text-slate-900">Para cada solução uma conversão efetiva para seu negócio</h5>
@@ -128,7 +128,7 @@ export default function Softhouse() {
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-r from-[#2938C0] to-[#5480F4] py-32">
+            <section className="bg-gradient-to-r from-[#2938C0] to-[#5480F4] py-32" id="manutencao-e-hospedagem">
                 <div className="container flex tablet:flex-col-reverse ">
                     <div className="w-6/12 tablet:w-full ">
                         {maintenance && <Accordion.Root className="flex flex-col gap-12" type="single" defaultValue={"0"} collapsible>

@@ -64,7 +64,7 @@ export default function Creation() {
                                     <p className="text-sm text-slate-500">{service.description}</p>
                                 </div>
                                 <Link href="/contato" className="block">
-                                    <Button>Entrar em contato</Button>
+                                    <Button outline>Entrar em contato</Button>
                                 </Link>
                                 <ul role="list" className="space-y-5 my-7">
                                     {service.items.map((item, index) => (

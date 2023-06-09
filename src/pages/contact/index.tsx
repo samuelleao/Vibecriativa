@@ -30,7 +30,7 @@ export default function Contact() {
                                     <span className="top-0 left-8 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
                                     <span className="animate-ping top-0 left-8 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
                                 </div>
-                                <span className="text-sm text-slate-500 leading-relaxed"><strong className="font-medium text-slate-900">Entraremos em contato</strong> por whatsapp dentro de 24 horas.</span>
+                                <span className="text-sm text-slate-500 leading-relaxed"><strong className="font-medium text-slate-900">Entraremos em contato</strong> por Whatsapp ou Email dentro de 24 horas.</span>
                             </div>
                             <Input label="Mensagem" placeholder="Digitar mensagem..." asElement="textarea" helperText="Deixe aqui sua dúvida, sugestão ou informações sobre projeto" />
                             <Input label="Assunto" placeholder="Digitar assunto" />
@@ -39,10 +39,10 @@ export default function Contact() {
                                 <small className="text-sm block leading-loose text-slate-500">Vamos precisar de um dos contatos abaixo, você pode inserir o que for melhor pra você, ou, os dois se quiser.</small>
                             </div>
                             <div className="grid grid-cols-2 gap-4 tablet:grid-cols-1 tablet:gap-8">
-                                <Input label="Contato de Whatsapp" helperText="(00) 0 0000-0000" />
-                                <Input label="Email" helperText="exemplo@email.com" />
+                                <Input label="Contato de Whatsapp" helperText="(00) 0 0000-0000" placeholder="Digitar whatsapp" />
+                                <Input label="Email" helperText="exemplo@email.com" placeholder="Digitar email" />
                             </div>
-                            <Input label="Seu Nome" />
+                            <Input label="Seu Nome" placeholder="Digitar nome"  />
                             <Button className="tablet:w-full" primary={true}> <RiSendPlaneFill /> Enviar mensagem</Button>
                         </form>
                     </div>

@@ -17,7 +17,7 @@ export function Footer() {
                 <div className="container">
                     <div className="max-w-[500px]">
                         <h6 className='text-3xl tablet:text-lg font-bold text-slate-50 leading-relaxed mb-10'>Temos o prazer em contribuir de forma efetiva para o crescimento da sua empresa</h6>
-                       <Link href="/contato"> <Button primary={true}>Entrar em contato</Button></Link>
+                        <Link href="/contato"> <Button primary={true}>Entrar em contato</Button></Link>
                     </div>
                 </div>
             </section>
@@ -44,7 +44,7 @@ export function Footer() {
                         </ul>
                     </div>
                     <div className="flex-1">
-                        <ul className='flex gap-4 tablet:grid tablet:grid-cols-3 tablet:gap-16 tablet:mb-32'>
+                        <ul className='flex tablet:flex-wrap gap-4 tablet:gap-4 tablet:mb-32'>
                             <li><Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/vibecriativa" className='w-12 h-12 rounded-lg flex items-center justify-center bg-blue-500  hover:bg-blue-600  text-slate-50'><span className="sr-only">Facebook</span><FaFacebookF size={18} /></Link></li>
                             <li><Link target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vibecriativa/" className='w-12 h-12 rounded-lg flex items-center justify-center bg-pink-500  hover:bg-pink-600  text-slate-50'><span className="sr-only">Instagram</span><FaInstagram size={18} /></Link></li>
                             <li><Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/ag%C3%AAncia-vibecriativa/" className='w-12 h-12 rounded-lg flex items-center justify-center bg-sky-600   hover:bg-sky-700   text-slate-50'><span className="sr-only">Linkedin</span><FaLinkedinIn size={18} /></Link></li>
@@ -52,8 +52,8 @@ export function Footer() {
                             <li><Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/Vibecriativa" className='w-12 h-12 rounded-lg flex items-center justify-center bg-blue-500  hover:bg-blue-600  text-slate-50'><span className="sr-only">Twitter</span><FaTwitter size={18} /></Link></li>
                         </ul>
                         <Image src="/logofooter.png" alt="Vibecriativa Logotipo" width={130} height={130} className='mt-12' />
-                        <p className='text-slate-400 text-sm mb-6 mt-12'>Vibecriativa Digital Marketing e Web. ©</p>
-                        <p className='text-slate-400 text-sm'>2023 Todos os direitos reservados</p>
+                        <p className='text-slate-400 text-sm mb-6 mt-12'>Vibecriativa Digital Marketing e Web ©</p>
+                        <p className='text-slate-400 text-sm'>{getCurrentYear()} Todos os direitos reservados</p>
                     </div>
                 </div>
                 <div className="container">
@@ -66,4 +66,9 @@ export function Footer() {
             </footer>
         </Fragment>
     )
+}
+
+function getCurrentYear() {
+    const data = new Date();
+    return data.getFullYear();
 }

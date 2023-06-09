@@ -31,16 +31,16 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                             <NavigationMenu.List asChild >
                                 <ul className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:pt-16' : 'tablet:pt-28'} tablet:top-0 tablet:flex tablet:pb-4 tablet:-z-[1] tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:gap-2 relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-screen tablet:before:w-full ` : 'tablet:hidden'}`}>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/">Início</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/">Início</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/sobre">Sobre a vibe</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/sobre">Sobre a vibe</Link></li>
                                     </NavigationMenu.Item>
-                                    <NavigationMenu.Item className="relative">
+                                    <NavigationMenu.Item className="relative tablet:w-full">
                                         <NavigationMenu.Trigger className={`relative group flex select-none items-center justify-between gap-[0.125rem] rounded-[4px] px-3 py-2 leading-none outline-none focus:shadow-[0_0_0_0.125rem] text-sm text-gray-50 font-normal tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"} tablet:p-0`}>
                                             Serviços
                                             <FaAngleDown
-                                                className="text-violet10 relative top-[0.063rem] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+                                                className="relative top-[0.063rem] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180 tablet:-rotate-[90deg]"
                                                 aria-hidden
                                             />
                                         </NavigationMenu.Trigger>
@@ -58,12 +58,12 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                         </NavigationMenu.Content>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/home#portfolio">Portfólio</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/home#portfolio">Portfólio</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/servico/produtos">Produtos</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/servico/produtos">Produtos</Link></li>
                                     </NavigationMenu.Item>
-                                    <ul className='flex space-x-4 items-center flex-1 justify-end'>
+                                    <ul className='flex space-x-4 items-center flex-1 justify-end tablet:w-full'>
                                         <li>
                                             <LinkWhatsapp>
                                                 <Button white={true} className="tablet:hidden notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
@@ -72,9 +72,9 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                                 </Button>
                                             </LinkWhatsapp>
                                         </li>
-                                        <li>
+                                        <li className="tablet:w-full pr-4">
                                             <Link href="/contato">
-                                                <Button className="tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isNavbarVisible}>Entrar em contato</Button>
+                                                <Button className="tablet:w-full tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isNavbarVisible}>Entrar em contato</Button>
                                             </Link>
                                         </li>
                                     </ul>
