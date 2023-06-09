@@ -15,9 +15,20 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
 
     const [menuMobileIsVisible, setMenuMobileIsVisible] = useState(false);
 
-    function changeVisibleMenuMobile() {
-        setMenuMobileIsVisible(!menuMobileIsVisible)
-    }
+    const menuUlRef = useRef<HTMLAnchorElement>(null); // Referência para o elemento <ul>
+
+    useEffect(() => {
+        if (menuMobileIsVisible) {
+          menuUlRef.current?.focus();
+          menuUlRef.current?.setAttribute("tabIndex", "1");
+        } else {
+          menuUlRef.current?.removeAttribute("tabIndex");
+        }
+      }, [menuMobileIsVisible]);
+    
+      function changeVisibleMenuMobile() {
+        setMenuMobileIsVisible(!menuMobileIsVisible);
+      }
 
     return (
         <div ref={navbarRef} className={`py-3 fixed w-full top-8 z-20 ${isNavbarVisible && 'bg-white top-[0_!important] shadow-sm'}`}>
@@ -29,9 +40,10 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                         </Link>
                         <NavigationMenu.Root className="flex-1">
                             <NavigationMenu.List asChild >
-                                <ul className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:pt-16' : 'tablet:pt-28'} tablet:top-0 tablet:flex tablet:pb-4 tablet:-z-[1] tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:gap-2 relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-screen tablet:before:w-full ` : 'tablet:hidden'}`}>
+                                <ul
+                                    aria-expanded={menuMobileIsVisible} className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:pt-16' : 'tablet:pt-28'} tablet:top-0 tablet:flex tablet:pb-4 tablet:-z-[1] tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:gap-2 relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-screen tablet:before:w-full ` : 'tablet:hidden'}`}>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/">Início</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/" ref={menuUlRef}>Início</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
                                         <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/sobre">Sobre a vibe</Link></li>
@@ -65,7 +77,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                     </NavigationMenu.Item>
                                     <ul className='flex space-x-4 items-center flex-1 justify-end tablet:w-full'>
                                         <li>
-                                            <LinkWhatsapp>
+                                            <LinkWhatsapp aria-label="Falar com a Vibecriativa no whatsapp">
                                                 <Button white={true} className="tablet:hidden notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
                                                     <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
                                                     Falar com a Vibecriativa
@@ -73,7 +85,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                             </LinkWhatsapp>
                                         </li>
                                         <li className="tablet:w-full pr-4">
-                                            <Link href="/contato">
+                                            <Link href="/contato" aria-label="Entrar em contato">
                                                 <Button className="tablet:w-full tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isNavbarVisible}>Entrar em contato</Button>
                                             </Link>
                                         </li>
@@ -87,7 +99,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                     </div>
                 </div>
                 <div className=''>
-                    <button onClick={changeVisibleMenuMobile} className={`px-4 py-2 w-max rounded relative desktop:hidden notbook1:hidden tablet:flex mobile:flex h-4`}>
+                    <button aria-label={menuMobileIsVisible ? "Fechar Menu" : "Abrir Menu"} onClick={changeVisibleMenuMobile} className={`px-4 py-2 w-max rounded relative desktop:hidden notbook1:hidden tablet:flex mobile:flex h-4`}>
                         <span className={`transition-transform ${menuMobileIsVisible ? 'rotate-[45deg] origin-left' : ''} w-6 top-0 left-0 absolute h-[0.125rem]  rounded-full ${isNavbarVisible || menuMobileIsVisible ? `bg-slate-950` : 'bg-white'}`}></span>
                         <span className={`transition-transform ${menuMobileIsVisible ? 'invisible' : 'visible'} absolute top-1/2 -translate-y-1/2 left-0 w-6 h-[0.125rem] rounded-full ${isNavbarVisible || menuMobileIsVisible ? `bg-slate-950` : 'bg-white'}`}></span>
                         <span className={`transition-transform ${menuMobileIsVisible ? '-rotate-[45deg] origin-[16%] w-6 ' : ''} w-4 bottom-0 left-0 absolute h-[0.125rem] rounded-full ${isNavbarVisible || menuMobileIsVisible ? `bg-slate-950` : 'bg-white'}`}></span>
