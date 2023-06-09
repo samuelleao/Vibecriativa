@@ -144,7 +144,7 @@ export default function Marketing() {
                                     </li>
                                 ))}
                             </ul>
-                            <Button className="w-full" primary={true}>Entrar em contato</Button>
+                            <Link href="/contato"><Button className="w-full" primary={true}>Entrar em contato</Button></Link>
                         </div>
                         <div className="relative border-2 border-primary-600 scale-105 tablet:scale-100 h-max tablet:w-full p-6 bg-white rounded-lg shadow-lg">
                             <span className="absolute right-4 px-2 py-1 rounded text-slate-50 text-xs -top-3 bg-gradient-to-r from-[#2938C0] to-[#5480F4]">Mais utilizado</span>
@@ -170,7 +170,7 @@ export default function Marketing() {
                                     </li>
                                 ))}
                             </ul>
-                            <Button className="w-full" primary={true}>Entrar em contato</Button>
+                            <Link href="/contato"><Button className="w-full" primary={true}>Entrar em contato</Button></Link>
                         </div>
                         <div className="h-max tablet:w-full p-6 bg-white rounded-lg shadow-lg">
                             <h5 className="mb-4 text-sm font-medium text-slate-500">{plan3.name}</h5>
@@ -195,7 +195,7 @@ export default function Marketing() {
                                     </li>
                                 ))}
                             </ul>
-                            <Button className="w-full" primary={true}>Entrar em contato</Button>
+                            <Link href="/contato"><Button className="w-full" primary={true}>Entrar em contato</Button></Link>
                         </div>
                     </div>
                 </div>

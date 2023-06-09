@@ -32,8 +32,8 @@ export default function Contact() {
                                 </div>
                                 <span className="text-sm text-slate-500 leading-relaxed"><strong className="font-medium text-slate-900">Entraremos em contato</strong> por Whatsapp ou Email dentro de 24 horas.</span>
                             </div>
-                            <Input label="Mensagem" placeholder="Digitar mensagem..." asElement="textarea" helperText="Deixe aqui sua dúvida, sugestão ou informações sobre projeto" />
                             <Input label="Assunto" placeholder="Digitar assunto" />
+                            <Input label="Mensagem" placeholder="Digitar mensagem..." asElement="textarea" helperText="Deixe aqui sua dúvida, sugestão ou informações sobre projeto" />
                             <div className="space-y-4 py-2">
                                 <strong className="text-base font-medium block">Seu melhor contato &#128513;</strong>
                                 <small className="text-sm block leading-loose text-slate-500">Vamos precisar de um dos contatos abaixo, você pode inserir o que for melhor pra você, ou, os dois se quiser.</small>

@@ -73,7 +73,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                         <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/home#projetos">Projetos</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/servico/produtos">Produtos</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" target="_blank" href="https://vibecriativa.tomticket.com/">Suporte</Link></li>
                                     </NavigationMenu.Item>
                                     <ul className='flex space-x-4 items-center flex-1 justify-end tablet:w-full'>
                                         <li>
