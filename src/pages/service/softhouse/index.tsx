@@ -84,7 +84,7 @@ export default function Softhouse() {
                         <h1 className="text-4xl w-8/12 tablet:w-full font-semibold text-slate-900 leading-relaxed mt-4 mobile:text-lg">Foco em desenvolver  seus objetivos.</h1>
                     </div>
                     <div className="w-[600px] max-w-full tablet:mt-12">
-                        <Image className="max-w-full" src="/softhouse-header.png" width={690} height={396} alt="" />
+                        <Image quality={100} priority className="max-w-full" src="/softhouse-header.png" width={690} height={396} alt="" />
                     </div>
                 </div>
             </header>

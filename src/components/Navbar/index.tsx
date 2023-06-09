@@ -25,11 +25,11 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                 <div className='flex space-x-8 items-center justify-between w-full'>
                     <div className="flex items-center gap-8 w-full">
                         <Link href="/">
-                            <Image quality={100} priority src={`${isNavbarVisible ? `/logo.png` : `/logofooter.png`}`} alt="Vibecriativa Logotipo" width={130} height={130} />
+                            <Image quality={100} priority src={`${isNavbarVisible || menuMobileIsVisible ? `/logo.png` : `/logofooter.png`}`} alt="Vibecriativa Logotipo" width={130} height={130} />
                         </Link>
                         <NavigationMenu.Root className="flex-1">
                             <NavigationMenu.List asChild >
-                                <ul className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:top-[65px]' : 'tablet:top-[120px]'} tablet:flex tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:top-[67px] tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:z-30 tablet:gap-2 tablet:pt-2 tablet:pb-4  relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-screen tablet:before:w-full ` : 'tablet:hidden'}`}>
+                                <ul className={`flex-1 justify-between flex items-center space-x-8 tablet:space-x-0 ${menuMobileIsVisible ? `${isNavbarVisible ? 'tablet:pt-16' : 'tablet:pt-28'} tablet:top-0 tablet:flex tablet:pb-4 tablet:-z-[1] tablet:flex-col tablet:justify-start tablet:items-start tablet:fixed tablet:w-full tablet:h-max tablet:bg-white tablet:left-0 tablet:gap-2 relative tablet:before:absolute tablet:before:translate-y-[100%] tablet:before:bottom-0 tablet:before:left-0 tablet:before:bg-black/20 tablet:before:h-screen tablet:before:w-full ` : 'tablet:hidden'}`}>
                                     <NavigationMenu.Item asChild>
                                         <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link href="/">Início</Link></li>
                                     </NavigationMenu.Item>
@@ -88,9 +88,9 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                 </div>
                 <div className=''>
                     <button onClick={changeVisibleMenuMobile} className={`px-4 py-2 w-max rounded relative desktop:hidden notbook1:hidden tablet:flex mobile:flex h-4`}>
-                        <span className={`transition-transform ${menuMobileIsVisible ? 'rotate-[45deg] origin-left' : ''} w-6 top-0 left-0 absolute h-[0.125rem]  rounded-full ${isNavbarVisible ? `bg-slate-950` : 'bg-white'}`}></span>
-                        <span className={`transition-transform ${menuMobileIsVisible ? 'invisible' : 'visible'} absolute top-1/2 -translate-y-1/2 left-0 w-6 h-[0.125rem] rounded-full ${isNavbarVisible ? `bg-slate-950` : 'bg-white'}`}></span>
-                        <span className={`transition-transform ${menuMobileIsVisible ? '-rotate-[45deg] origin-[16%] w-6 ' : ''} w-4 bottom-0 left-0 absolute h-[0.125rem] rounded-full ${isNavbarVisible ? `bg-slate-950` : 'bg-white'}`}></span>
+                        <span className={`transition-transform ${menuMobileIsVisible ? 'rotate-[45deg] origin-left' : ''} w-6 top-0 left-0 absolute h-[0.125rem]  rounded-full ${isNavbarVisible || menuMobileIsVisible ? `bg-slate-950` : 'bg-white'}`}></span>
+                        <span className={`transition-transform ${menuMobileIsVisible ? 'invisible' : 'visible'} absolute top-1/2 -translate-y-1/2 left-0 w-6 h-[0.125rem] rounded-full ${isNavbarVisible || menuMobileIsVisible ? `bg-slate-950` : 'bg-white'}`}></span>
+                        <span className={`transition-transform ${menuMobileIsVisible ? '-rotate-[45deg] origin-[16%] w-6 ' : ''} w-4 bottom-0 left-0 absolute h-[0.125rem] rounded-full ${isNavbarVisible || menuMobileIsVisible ? `bg-slate-950` : 'bg-white'}`}></span>
                     </button>
                 </div>
             </div>

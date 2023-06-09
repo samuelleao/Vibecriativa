@@ -41,9 +41,9 @@ module.exports = {
       },
       screens: {
         mobile: "100%",
-        notbook: "80rem",
         tablet: "70rem",
-        desktop: "85rem",
+        notbook: "75rem",
+        desktop: "80rem",
       },
     },
     fontFamily: {

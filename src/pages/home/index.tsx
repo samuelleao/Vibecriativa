@@ -56,26 +56,26 @@ export default function Home() {
     const navbarRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        if(currentElement){
+        if (currentElement) {
             const handleScroll = () => {
                 if (navbarRef) {
                     const navbarRect = navbarRef.current?.getBoundingClientRect()
-                    const otherElementRect = currentElement.getBoundingClientRect() 
-                    
+                    const otherElementRect = currentElement.getBoundingClientRect()
+
                     const isTouching = navbarRect && navbarRect.bottom >= otherElementRect.top;
-          
-                    if(isTouching === true){
+
+                    if (isTouching === true) {
                         setIsNavbarVisible(true);
-                    }else{
+                    } else {
                         setIsNavbarVisible(false);
                     }
                 }
             };
-    
-            handleScroll(); 
+
+            handleScroll();
 
             window.addEventListener("scroll", handleScroll);
-    
+
             return () => {
                 window.removeEventListener("scroll", handleScroll);
             };
@@ -94,9 +94,10 @@ export default function Home() {
                         <h1 ref={processRef} className='text-4xl tablet:text-2xl font-semibold text-slate-50 leading-normal'>Criando e convertendo em <span className='text-secondary-500'>valor</span> para você</h1>
                         <p className='text-base font-normal text-slate-50'>Desenvolvimento <strong className='font-medium'>especializado</strong> e <strong className='font-medium'>focado</strong> na experiência do usuário</p>
                         <div className="flex gap-4">
-                            <Button secondary={true}>
-                                Iniciar projeto
-                            </Button>
+                            <Link href="/contato">
+                                <Button secondary={true}>
+                                    Entrar em contato
+                                </Button></Link>
                             <Link href="#portfolio">
                                 <Button outline white>
                                     Portfólio
@@ -118,7 +119,7 @@ export default function Home() {
                             {services.map((service, index) => (
                                 <div className='space-y-6 px-8 py-9 bg-white rounded-lg' key={index}>
                                     <h4 className='text-lg font-semibold text-slate-900'><span className='mr-2'>{service.emoji}</span> {service.name}</h4>
-                                    <div className="flex gap-3">
+                                    <div className="flex gap-3 flex-wrap">
                                         {service.subservices.map((internalService, index) => (
                                             <small className='min-w-max font-medium text-sm text-slate-900' key={index}>{internalService.name}</small>
                                         ))}
@@ -134,7 +135,7 @@ export default function Home() {
                     <div className="container flex flex-col">
                         <div className="flex justify-between items-center mb-20 tablet:mb-0 tablet:flex-col tablet:items-start tablet:gap-12">
                             <h5 className='text-2xl font-semibold w-5/12 leading-relaxed tablet:w-full'><span className='text-primary-500'>Empresas</span> como a sua estão <span className='text-primary-500'>redesenhando</span> a forma como projetam</h5>
-                            <Button primary={true}>Entrar em contato</Button>
+                            <Link href="/contato"><Button primary={true}>Entrar em contato</Button></Link>
                         </div>
                         <div className="tablet:w-full tablet:mt-32 gap-4 w-full">
                             <motion.div

@@ -17,7 +17,7 @@ export function Footer() {
                 <div className="container">
                     <div className="max-w-[500px]">
                         <h6 className='text-3xl tablet:text-lg font-bold text-slate-50 leading-relaxed mb-10'>Temos o prazer em contribuir de forma efetiva para o crescimento da sua empresa</h6>
-                        <Button primary={true}>Iniciar Projeto</Button>
+                       <Link href="/contato"> <Button primary={true}>Entrar em contato</Button></Link>
                     </div>
                 </div>
             </section>
@@ -29,7 +29,7 @@ export function Footer() {
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/sobre">Sobre a vibe</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/home#portfolio">Portfólio</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><LinkWhatsapp>Falar com a vibe</LinkWhatsapp></li>
-                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/contato">Entra em Contato</Link></li>
+                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/contato">Entrar em contato</Link></li>
                         </ul>
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-slate-50'>Serviços</li>

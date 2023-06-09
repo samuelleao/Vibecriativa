@@ -36,7 +36,7 @@ export default function Contact() {
                             <Input label="Assunto" placeholder="Digitar assunto" />
                             <div className="space-y-4 py-2">
                                 <strong className="text-base font-medium block">Seu melhor contato &#128513;</strong>
-                                <small className="text-sm block leading-loose text-slate-500">Vamos precisar de um desses contatos abaixo, você insere o que for melhor pra você, ou os dois se quiser.</small>
+                                <small className="text-sm block leading-loose text-slate-500">Vamos precisar de um dos contatos abaixo, você pode inserir o que for melhor pra você, ou, os dois se quiser.</small>
                             </div>
                             <div className="grid grid-cols-2 gap-4 tablet:grid-cols-1 tablet:gap-8">
                                 <Input label="Contato de Whatsapp" helperText="(00) 0 0000-0000" />

@@ -19,7 +19,7 @@ const creationServices = [
     },
     {
         title: "Design Gráfico Estratégico",
-        description: "Ambiente voltado para criação do design de suas interfaces na internet",
+        description: "Ambiente para criar de forma estratégica sua comunicação visual na internet",
         items: [
             "Artes para Redes Sociais",
             "Artes Banners",
@@ -29,7 +29,7 @@ const creationServices = [
     },
     {
         title: "Design para MIV",
-        description: "Ambiente voltado para criação do design de suas interfaces na internet",
+        description: "Aqui podemos criar sua marca e dar um significado a cada detalhe",
         items: [
             "Desenvolvimento do logotipo",
             "Paleta de cores",
