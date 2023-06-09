@@ -26,6 +26,10 @@ const nextConfig = {
         source: '/servico/produtos',
         destination: '/service/products',
       },
+      {
+        source: '/politica-de-privacidade',
+        destination: '/privacyPolicy',
+      },
     ];
   },
   reactStrictMode: true,

@@ -59,8 +59,7 @@ export function Footer() {
                 <div className="container">
                     <ul className='space-y-10 mt-32'>
                         <li className='text-sm font-semibold text-slate-50'>Privacidade</li>
-                        <li className='text-sm font-medium text-slate-400'>Política de privacidade</li>
-                        <li className='text-sm font-medium text-slate-400'>Gerenciar uso de cookies</li>
+                        <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/politica-de-privacidade">Política de privacidade</Link></li>
                     </ul>
                 </div>
             </footer>
