@@ -70,7 +70,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                         </NavigationMenu.Content>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/home#portfolio">Portfólio</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/home#projetos">Projetos</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
                                         <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/servico/produtos">Produtos</Link></li>
