@@ -26,7 +26,7 @@ export function Footer() {
                     <div className="grid grid-cols-3 w-8/12 tablet:w-full tablet:grid-cols-1 tablet:gap-32 tablet:mt-32">
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-slate-50'>Institucional</li>
-                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/sobre">Sobre a vibe</Link></li>
+                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/sobre">Sobre a Vibe</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/home#portfolio">Portfólio</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><LinkWhatsapp>Falar com a vibe</LinkWhatsapp></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/contato">Entrar em contato</Link></li>

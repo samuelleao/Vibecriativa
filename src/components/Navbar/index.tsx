@@ -46,7 +46,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                         <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/" ref={menuUlRef}>Início</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item asChild>
-                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/sobre">Sobre a vibe</Link></li>
+                                        <li className={`text-sm text-gray-50 tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"}`}><Link className="w-full block h-full" href="/sobre">Sobre a Vibe</Link></li>
                                     </NavigationMenu.Item>
                                     <NavigationMenu.Item className="relative tablet:w-full">
                                         <NavigationMenu.Trigger className={`relative group flex select-none items-center justify-between gap-[0.125rem] rounded-[4px] px-3 py-2 leading-none outline-none focus:shadow-[0_0_0_0.125rem] text-sm text-gray-50 font-normal tablet:text-slate-900 tablet:px-4 tablet:py-6 tablet:w-full tablet:font-medium ${isNavbarVisible && "text-gray-900"} tablet:p-0`}>
