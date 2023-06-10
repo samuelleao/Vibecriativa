@@ -95,11 +95,11 @@ export default function Home() {
                         <p className='text-base mobile:text-sm mobile:leading-loose font-normal text-slate-50'>Desenvolvimento <strong className='font-medium'>especializado</strong> e <strong className='font-medium'>focado</strong> na experiência do usuário</p>
                         <div className="flex gap-4 mobile:flex-col">
                             <Link href="/contato" className='mobile:w-full'>
-                                <Button className='mobile:w-full' secondary={true}>
+                                <Button className='mobile:w-full' variant='secondary'>
                                     Entrar em contato
                                 </Button></Link>
                             <Link href="#projetos" className='mobile:w-full'>
-                                <Button className='mobile:w-full' outline white>
+                                <Button className='mobile:w-full' variant='outline'>
                                     Visualizar projetos
                                 </Button>
                             </Link>

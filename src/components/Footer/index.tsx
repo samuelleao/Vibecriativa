@@ -17,7 +17,7 @@ export function Footer() {
                 <div className="container">
                     <div className="max-w-[500px]">
                         <h6 className='text-3xl tablet:text-lg font-bold text-slate-50 leading-relaxed mb-10'>Temos o prazer em contribuir de forma efetiva para o crescimento da sua empresa</h6>
-                        <Link href="/contato"> <Button primary={true}>Entrar em contato</Button></Link>
+                        <Link href="/contato"> <Button variant="primary">Entrar em contato</Button></Link>
                     </div>
                 </div>
             </section>

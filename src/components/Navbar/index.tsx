@@ -86,7 +86,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                         </li>
                                         <li className="tablet:w-full pr-4">
                                             <Link href="/contato" aria-label="Entrar em contato">
-                                                <Button className="tablet:w-full tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700" white={true} outline={true} primary={isNavbarVisible}>Entrar em contato</Button>
+                                                <Button variant={isNavbarVisible ? "primary" : "outline"} className="tablet:w-full tablet:bg-primary-600 tablet:border-primary-600 tablet:text-gray-50 tablet:hover:bg-primary-700 tablet:hover:border-primary-700">Entrar em contato</Button>
                                             </Link>
                                         </li>
                                     </ul>

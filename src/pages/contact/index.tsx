@@ -19,7 +19,7 @@ export default function Contact() {
                 <div className="container flex relative z-10 items-center tablet:flex-col tablet:gap-14">
                     <div className="flex-1 pr-16 tablet:pr-0">
                         <h1 className="text-4xl font-semibold leading-relaxed text-slate-50 tablet:text-xl">Início de uma nova <span className="text-secondary-500">experência</span></h1>
-                        <p className="pr-40 tablet:pr-0 text-sm text-gray-50 leading-loose tablet:leading-loose mt-8 tablet:text-sm">No campos abaixo vamos colher alguns dados importantes para poder iniciar o seu projeto</p>
+                        <p className="pr-40 tablet:pr-0 text-sm text-gray-50 leading-loose tablet:leading-loose mt-4 tablet:text-sm">No campos abaixo vamos colher alguns dados importantes para poder iniciar o seu projeto</p>
                     </div>
                     <div className="flex-1">
                         <form action="" className="px-8 py-10 border border-slate-200 rounded-lg space-y-8 bg-white tablet:px-4 tablet:py-4">
@@ -43,7 +43,7 @@ export default function Contact() {
                                 <Input label="Email" helperText="exemplo@email.com" placeholder="Digitar email" />
                             </div>
                             <Input label="Seu Nome" placeholder="Digitar nome"  />
-                            <Button className="tablet:w-full" primary={true}> <RiSendPlaneFill /> Enviar mensagem</Button>
+                            <Button className="tablet:w-full" variant="primary"> <RiSendPlaneFill /> Enviar mensagem</Button>
                         </form>
                     </div>
                 </div>
