@@ -2,7 +2,7 @@ import { render } from '@react-email/render';
 import nodemailer from 'nodemailer';
 import Email from '@pages/email';
 import { NextRequest, NextResponse } from 'next/server';
-import { mailOptions, transporter } from '@lib/nodemailer';
+import { email, transporter } from '@lib/nodemailer';
 import { NextApiResponse } from 'next';
 
 interface DataTypes {
@@ -52,10 +52,11 @@ const handler = async (req: NextRequest, res: NextApiResponse) => {
       }));
 
       await transporter.sendMail({
-        ...mailOptions,
         html: emailHtml,
         subject: `Vibecriativa Website - ${data.subject}`,
-        replyTo: data.email
+        replyTo: data.email,
+        from: data.email,
+        to: email
       });
 
       return res.status(200).json({ sucess: true })
