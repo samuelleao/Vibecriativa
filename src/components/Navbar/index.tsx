@@ -78,7 +78,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                                     <ul className='flex space-x-4 items-center flex-1 justify-end tablet:w-full'>
                                         <li>
                                             <LinkWhatsapp aria-label="Falar com a Vibecriativa no whatsapp">
-                                                <Button white={true} className="tablet:hidden notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
+                                                <Button className="tablet:hidden notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
                                                     <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
                                                     Falar com a Vibecriativa
                                                 </Button>
@@ -107,7 +107,7 @@ export function Navbar({ navbarRef, isNavbarVisible = true, setIsNavbarVisible }
                 </div>
             </div>
             <LinkWhatsapp>
-                <Button white={true} className="hidden tablet:flex notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
+                <Button className="hidden tablet:flex notbook2:fixed notbook2:rounded-none notbook2:bottom-0 notbook2:w-full notbook2:left-0">
                     <Image width={16} height={16} src="/whatsapp.svg" alt="Logotipo do Whatsapp" />
                     Falar com a Vibecriativa
                 </Button>
