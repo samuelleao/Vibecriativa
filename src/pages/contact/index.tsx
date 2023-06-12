@@ -8,10 +8,17 @@ import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 import { RiSendPlaneFill } from "react-icons/ri"
 import { useForm } from "react-hook-form";
-import { ContactInfo } from "./types";
 
 import axios from "axios"
 import { FeedbackToUser } from "@components/FeedbackToUser";
+
+interface ContactInfo {
+    name: string,
+    subject: string,
+    email: string,
+    whatsapp: string,
+    message: string
+}
 
 export default function Contact() {
 
