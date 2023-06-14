@@ -2,9 +2,6 @@ import { Button } from '@components/Button'
 import { Mockups } from '@components/Mockups'
 import { Navbar } from '@components/Navbar'
 import { Fragment, useEffect, useRef, useState } from 'react'
-import * as Accordion from '@radix-ui/react-accordion';
-import { AccordionContent, AccordionItem, AccordionTrigger } from '@components/Accordion';
-import Image from 'next/image'
 import { Project } from '@components/Project';
 import Link from 'next/link';
 import { motion } from "framer-motion"
@@ -49,35 +46,25 @@ export default function Home() {
 
     }, [projects]);
 
-    const [menuMobileIsVisible, setMenuMobileIsVisible] = useState(false);
-
     const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
-    const navbarRef = useRef<HTMLDivElement>(null)
+    const navbarRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (currentElement) {
-            const handleScroll = () => {
-                if (navbarRef) {
-                    const navbarRect = navbarRef.current?.getBoundingClientRect()
-                    const otherElementRect = currentElement.getBoundingClientRect()
-
-                    const isTouching = navbarRect && navbarRect.bottom >= otherElementRect.top;
-
-                    if (isTouching === true) {
-                        setIsNavbarVisible(true);
-                    } else {
-                        setIsNavbarVisible(false);
-                    }
+        if (currentElement && navbarRef.current) {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    setIsNavbarVisible(!entry.isIntersecting);
+                },
+                {
+                    root: null, threshold: 0, rootMargin: "-200px",
                 }
-            };
+            );
 
-            handleScroll();
-
-            window.addEventListener("scroll", handleScroll);
+            observer.observe(currentElement);
 
             return () => {
-                window.removeEventListener("scroll", handleScroll);
+                observer.unobserve(currentElement);
             };
         }
     }, [currentElement]);
