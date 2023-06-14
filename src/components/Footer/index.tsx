@@ -27,7 +27,7 @@ export function Footer() {
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-slate-50'>Institucional</li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/sobre">Sobre a Vibe</Link></li>
-                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/home#portfolio">Portfólio</Link></li>
+                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/#projetos">Portfólio</Link></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><LinkWhatsapp>Falar com a vibe</LinkWhatsapp></li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><Link href="/contato">Entrar em contato</Link></li>
                         </ul>
@@ -40,7 +40,8 @@ export function Footer() {
                         <ul className='space-y-10'>
                             <li className='text-sm font-semibold text-slate-50'>Dúvidas</li>
                             <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><LinkWhatsapp>Falar no whatsapp</LinkWhatsapp></li>
-                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'>Enviar email</li>
+                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><a target="_blank" href="mailto:contato@vibecriativa.com">Enviar email</a></li>
+                            <li className='text-sm font-medium text-slate-400 hover:text-slate-200'><a target="_blank" href="tel:+558420207999">Ligar para Vibe</a></li>
                         </ul>
                     </div>
                     <div className="flex-1">
