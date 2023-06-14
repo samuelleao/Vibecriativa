@@ -84,7 +84,8 @@ export default function Contact() {
 
     return (
         <Fragment>
-            <FeedbackToUser title={feedbackToUserTitle}
+            <FeedbackToUser 
+                title={feedbackToUserTitle}
                 description={feedbackToUserDescription}
                 open={feedbackToUserController}
                 setOpen={setFeedbackToUserController}

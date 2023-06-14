@@ -1,4 +1,3 @@
-import { Html } from "@react-email/html";
 import { Text } from "@react-email/text";
 import { Section } from "@react-email/section";
 import { Tailwind } from '@react-email/tailwind';
